@@ -113,9 +113,9 @@ The tuned models started performing better than the baseline and feature enginee
 1. Changing higher level parameters adding more complexity to the model training job.
 1. The demand is given by timestamps, in a way the data is time series data. However, in this project, the it was treated as a regression task rather than time series. Therefore, time series related variables were not generated or included in the data.
 
-![model_train_score.png](img/model_train_score.png)
+![model_train_score.png](model_train_score.png)
 
-![model_test_score.png](img/model_test_score.png)
+![model_test_score.png](model_test_score.png)
 
 
 ## Summary
