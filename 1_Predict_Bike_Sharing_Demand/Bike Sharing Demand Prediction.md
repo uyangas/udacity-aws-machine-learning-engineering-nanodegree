@@ -110,8 +110,8 @@ __Configuration__:
 The tuned models started performing better than the baseline and feature engineered models. Increasing model training time and adjusting 2 hyperparameters didn't improve the kaggle score much (`Tuned1`). In `Tuned2`, more features were generated and added and certain parameters were adjusted. However, parameter adjusted models overfit the training data. As you can see, the best model's performance or the error rate was significantly lower (-0.009) for `Tuned2` model, however, kaggle score is higher than the untuned model. This could be due to:
 
 1. We didn't tune the estimators. The performance of the autogluon model may improve if we tune the individual estimators.
-1. Changing higher level parameters adding more complexity to the model training job.
-1. The demand is given by timestamps, in a way the data is time series data. However, in this project, the it was treated as a regression task rather than time series. Therefore, time series related variables were not generated or included in the data.
+1. Changing higher level parameters added more complexity to the model training job.
+1. The demand is given by timestamps, in a way the data is time series data. However, in this project, it was treated as a regression task rather than time series. Therefore, time series related variables were not generated or included in the data. Some time series properties weren't captured by the models.
 
 ![model_train_score.png](model_train_score.png)
 
