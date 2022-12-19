@@ -16,7 +16,7 @@ The followings were observed from the bike sharing data:
 In this section, the baseline model was performed as:
 
 1. The train and test data were used without any transformation, train and test split, model tuning or feature engineering.
-1. The columns mentioned [above](#data-description) were not corrected or datatypes were not changed.
+1. The columns mentioned [above](#i-baseline-model) were not corrected or datatypes were not changed.
 1. To make the datasets same, `casual` and `registered` columns were not included in the training data.
 1. `datatime` column was not included in both `train` and `test` data.
 
@@ -98,8 +98,8 @@ __Configuration__:
 
 |  | Baseline | F.Engineered | Tuned1 | Tuned2 | Tuned3 | 
 |---|---|---|---|---|---|
-| # of Features | 9 | 11 | | | |
-| Updated features | - | Mentioned [here](#2-1-data-preperation) | [2.1.](#2-1-data-preperation) | - 1. `weekday` converted to `categorical` <br /> - removed `casual` and `registered` <br /> - Added `type_hour` variable: 1-peak hour, 2-night time, and 3-day time <br /> - Added `year`, `month`, `day` variables| The same as Tuned2 |
+| # of Features | 9 | 11 | 11 | 16 | 16 |
+| Updated features | - | Mentioned in `2.1.` | Mentioned in `2.1.` | - 1. `weekday` converted to `categorical` <br /> - removed `casual` and `registered` <br /> - Added `type_hour` variable: 1-peak hour, 2-night time, and 3-day time <br /> - Added `year`, `month`, `day` variables| The same as Tuned2 |
 | Parameters* | - `time_limit`: `600` | - `time_limit`: `600` | - `time_limit`: `900` <br /> - `num_bag_folds`:`2` | - `time_limit`: `900` <br /> - `num_bag_folds`:`2` <br /> -`num_bag_sets`:`2` | - `time_limit`: `900` <br /> - `num_bag_folds`:`3` <br /> -`num_bag_sets`:`3` <br /> - `num_stack_levels`:`1` |
 | Train valid split valid size | - | - | - | 0.2 | 0.2 |
 | The best model training error | -140.69 | -1.64 | -1.64 | -0.009 | -0.009 |
@@ -120,4 +120,4 @@ The tuned models started performing better than the baseline and feature enginee
 
 ## Summary
 
-In this project, we used `AutoGluon` to train and predict demand for bike sharing service. The training data consists of `12 columns` and `10886 rows` and `test` dataframe consists of `9 columns` and `6492 rows`. The timestamp ranged from 2011 to 2013 and the data was given by hourly frequency. I trained 5 AutoGluon models, however, the models were not tuned on the estimator level. The best performing model based on kaggle score is the feature engineered model. When the higher level parameters were adjusted, the models tend to overfit. It could be due to the reasons that I mentioned in the [III. Hyper parameter tuned models](iii-hyper-parameter-tuned-models).
+In this project, we used `AutoGluon` to train and predict demand for bike sharing service. The training data consists of `12 columns` and `10886 rows` and `test` dataframe consists of `9 columns` and `6492 rows`. The timestamp ranged from 2011 to 2013 and the data was given by hourly frequency. I trained 5 AutoGluon models, however, the models were not tuned on the estimator level. The best performing model based on kaggle score is the feature engineered model. When the higher level parameters were adjusted, the models tend to overfit. It could be due to the reasons that I mentioned in the [III. Hyper parameter tuned models](https://github.com/uyangas/AWS_MLE/blob/main/1_Predict_Bike_Sharing_Demand/Bike%20Sharing%20Demand%20Prediction.md#iii-hyper-parameter-tuned-models).
