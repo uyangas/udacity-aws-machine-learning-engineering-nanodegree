@@ -14599,7 +14599,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install -U pip
@@ -14628,217 +14628,569 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Requirement already satisfied: pip in /usr/local/lib/python3.8/site-packages (22.3.1)
+<pre>Requirement already satisfied: pip in /usr/local/lib/python3.8/site-packages (21.2.4)
+Collecting pip
+  Using cached pip-22.3.1-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 21.2.4
+    Uninstalling pip-21.2.4:
+      Successfully uninstalled pip-21.2.4
+Successfully installed pip-22.3.1
+<span class="ansi-yellow-fg">WARNING: Running pip as the &#39;root&#39; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv</span>
+Requirement already satisfied: setuptools in /usr/local/lib/python3.8/site-packages (57.5.0)
+Collecting setuptools
+  Using cached setuptools-65.6.3-py3-none-any.whl (1.2 MB)
+Requirement already satisfied: wheel in /usr/local/lib/python3.8/site-packages (0.37.0)
+Collecting wheel
+  Using cached wheel-0.38.4-py3-none-any.whl (36 kB)
+Installing collected packages: wheel, setuptools
+  Attempting uninstall: wheel
+    Found existing installation: wheel 0.37.0
+    Uninstalling wheel-0.37.0:
+      Successfully uninstalled wheel-0.37.0
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 57.5.0
+    Uninstalling setuptools-57.5.0:
+      Successfully uninstalled setuptools-57.5.0
+Successfully installed setuptools-65.6.3 wheel-0.38.4
 <span class="ansi-yellow-fg">WARNING: Running pip as the &#39;root&#39; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv</span><span class="ansi-yellow-fg">
-</span>Requirement already satisfied: setuptools in /usr/local/lib/python3.8/site-packages (65.6.3)
-Requirement already satisfied: wheel in /usr/local/lib/python3.8/site-packages (0.38.4)
-<span class="ansi-yellow-fg">WARNING: Running pip as the &#39;root&#39; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv</span><span class="ansi-yellow-fg">
-</span>Requirement already satisfied: mxnet&lt;2.0.0 in /usr/local/lib/python3.8/site-packages (1.9.1)
-Requirement already satisfied: bokeh==2.0.1 in /usr/local/lib/python3.8/site-packages (2.0.1)
-Requirement already satisfied: typing-extensions&gt;=3.7.4 in /usr/local/lib/python3.8/site-packages (from bokeh==2.0.1) (4.4.0)
-Requirement already satisfied: Jinja2&gt;=2.7 in /usr/local/lib/python3.8/site-packages (from bokeh==2.0.1) (3.1.2)
-Requirement already satisfied: numpy&gt;=1.11.3 in /usr/local/lib/python3.8/site-packages (from bokeh==2.0.1) (1.22.4)
-Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.8/site-packages (from bokeh==2.0.1) (2.8.2)
-Requirement already satisfied: pillow&gt;=4.0 in /usr/local/lib/python3.8/site-packages (from bokeh==2.0.1) (9.0.1)
+</span>Collecting mxnet&lt;2.0.0
+  Using cached mxnet-1.9.1-py3-none-manylinux2014_x86_64.whl (49.1 MB)
+Collecting bokeh==2.0.1
+  Using cached bokeh-2.0.1-py3-none-any.whl
+Collecting pillow&gt;=4.0
+  Using cached Pillow-9.3.0-cp38-cp38-manylinux_2_28_x86_64.whl (3.3 MB)
 Requirement already satisfied: tornado&gt;=5 in /usr/local/lib/python3.8/site-packages (from bokeh==2.0.1) (6.2)
-Requirement already satisfied: PyYAML&gt;=3.10 in /usr/local/lib/python3.8/site-packages (from bokeh==2.0.1) (5.4.1)
+Collecting typing-extensions&gt;=3.7.4
+  Using cached typing_extensions-4.4.0-py3-none-any.whl (26 kB)
+Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.8/site-packages (from bokeh==2.0.1) (2.8.2)
 Requirement already satisfied: packaging&gt;=16.8 in /usr/local/lib/python3.8/site-packages (from bokeh==2.0.1) (21.3)
-Requirement already satisfied: graphviz&lt;0.9.0,&gt;=0.8.1 in /usr/local/lib/python3.8/site-packages (from mxnet&lt;2.0.0) (0.8.4)
+Collecting Jinja2&gt;=2.7
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Requirement already satisfied: PyYAML&gt;=3.10 in /usr/local/lib/python3.8/site-packages (from bokeh==2.0.1) (5.4.1)
+Collecting numpy&gt;=1.11.3
+  Using cached numpy-1.24.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
 Requirement already satisfied: requests&lt;3,&gt;=2.20.0 in /usr/local/lib/python3.8/site-packages (from mxnet&lt;2.0.0) (2.28.1)
-Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.8/site-packages (from Jinja2&gt;=2.7-&gt;bokeh==2.0.1) (2.1.1)
+Collecting graphviz&lt;0.9.0,&gt;=0.8.1
+  Using cached graphviz-0.8.4-py2.py3-none-any.whl (16 kB)
+Collecting MarkupSafe&gt;=2.0
+  Using cached MarkupSafe-2.1.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
 Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /usr/local/lib/python3.8/site-packages (from packaging&gt;=16.8-&gt;bokeh==2.0.1) (3.0.9)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/site-packages (from python-dateutil&gt;=2.1-&gt;bokeh==2.0.1) (1.16.0)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.8/site-packages (from requests&lt;3,&gt;=2.20.0-&gt;mxnet&lt;2.0.0) (1.26.13)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.8/site-packages (from requests&lt;3,&gt;=2.20.0-&gt;mxnet&lt;2.0.0) (3.4)
 Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/python3.8/site-packages (from requests&lt;3,&gt;=2.20.0-&gt;mxnet&lt;2.0.0) (2.1.1)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.8/site-packages (from requests&lt;3,&gt;=2.20.0-&gt;mxnet&lt;2.0.0) (2022.9.24)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.8/site-packages (from requests&lt;3,&gt;=2.20.0-&gt;mxnet&lt;2.0.0) (3.4)
+Installing collected packages: typing-extensions, pillow, numpy, MarkupSafe, graphviz, mxnet, Jinja2, bokeh
+Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.1 bokeh-2.0.1 graphviz-0.8.4 mxnet-1.9.1 numpy-1.24.0 pillow-9.3.0 typing-extensions-4.4.0
 <span class="ansi-yellow-fg">WARNING: Running pip as the &#39;root&#39; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv</span><span class="ansi-yellow-fg">
-</span>Requirement already satisfied: autogluon in /usr/local/lib/python3.8/site-packages (0.6.0)
-Requirement already satisfied: autogluon.text==0.6.0 in /usr/local/lib/python3.8/site-packages (from autogluon) (0.6.0)
-Requirement already satisfied: autogluon.features==0.6.0 in /usr/local/lib/python3.8/site-packages (from autogluon) (0.6.0)
-Requirement already satisfied: autogluon.core[all]==0.6.0 in /usr/local/lib/python3.8/site-packages (from autogluon) (0.6.0)
-Requirement already satisfied: autogluon.timeseries[all]==0.6.0 in /usr/local/lib/python3.8/site-packages (from autogluon) (0.6.0)
-Requirement already satisfied: autogluon.multimodal==0.6.0 in /usr/local/lib/python3.8/site-packages (from autogluon) (0.6.0)
-Requirement already satisfied: autogluon.vision==0.6.0 in /usr/local/lib/python3.8/site-packages (from autogluon) (0.6.0)
-Requirement already satisfied: autogluon.tabular[all]==0.6.0 in /usr/local/lib/python3.8/site-packages (from autogluon) (0.6.0)
-Requirement already satisfied: numpy&lt;1.24,&gt;=1.21 in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.0-&gt;autogluon) (1.22.4)
-Requirement already satisfied: tqdm&gt;=4.38.0 in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.0-&gt;autogluon) (4.64.1)
-Requirement already satisfied: boto3 in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.0-&gt;autogluon) (1.26.24)
-Requirement already satisfied: pandas!=1.4.0,&lt;1.6,&gt;=1.2.5 in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.0-&gt;autogluon) (1.5.2)
-Requirement already satisfied: distributed&lt;=2021.11.2,&gt;=2021.09.1 in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.0-&gt;autogluon) (2021.11.2)
-Requirement already satisfied: dask&lt;=2021.11.2,&gt;=2021.09.1 in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.0-&gt;autogluon) (2021.11.2)
-Requirement already satisfied: autogluon.common==0.6.0 in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.0-&gt;autogluon) (0.6.0)
-Requirement already satisfied: scikit-learn&lt;1.2,&gt;=1.0.0 in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.0-&gt;autogluon) (1.1.3)
-Requirement already satisfied: matplotlib in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.0-&gt;autogluon) (3.6.2)
-Requirement already satisfied: scipy&lt;1.10.0,&gt;=1.5.4 in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.0-&gt;autogluon) (1.8.1)
-Requirement already satisfied: requests in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.0-&gt;autogluon) (2.28.1)
-Requirement already satisfied: ray&lt;2.1,&gt;=2.0 in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.0-&gt;autogluon) (2.0.1)
-Requirement already satisfied: hyperopt&lt;0.2.8,&gt;=0.2.7 in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.0-&gt;autogluon) (0.2.7)
-Requirement already satisfied: psutil&lt;6,&gt;=5.7.3 in /usr/local/lib/python3.8/site-packages (from autogluon.features==0.6.0-&gt;autogluon) (5.8.0)
-Requirement already satisfied: nltk&lt;4.0.0,&gt;=3.4.5 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (3.7)
-Requirement already satisfied: torch&lt;1.13,&gt;=1.9 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (1.12.1)
-Requirement already satisfied: pytorch-lightning&lt;1.8.0,&gt;=1.7.4 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (1.7.7)
-Requirement already satisfied: scikit-image&lt;0.20.0,&gt;=0.19.1 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (0.19.3)
-Requirement already satisfied: seqeval&lt;=1.2.2 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (1.2.2)
-Requirement already satisfied: evaluate&lt;=0.2.2 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (0.2.2)
-Requirement already satisfied: pytorch-metric-learning&lt;1.4.0,&gt;=1.3.0 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (1.3.2)
-Requirement already satisfied: Pillow&lt;9.1.0,&gt;=9.0.1 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (9.0.1)
-Requirement already satisfied: torchmetrics&lt;0.9.0,&gt;=0.8.0 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (0.8.2)
-Requirement already satisfied: albumentations&lt;=1.2.0,&gt;=1.1.0 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (1.1.0)
-Requirement already satisfied: pycocotools&lt;2.0.7,&gt;=2.0.5 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (2.0.6)
-Requirement already satisfied: defusedxml&lt;=0.7.1,&gt;=0.7.1 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (0.7.1)
-Requirement already satisfied: nptyping&lt;1.5.0,&gt;=1.4.4 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (1.4.4)
-Requirement already satisfied: openmim&lt;=0.2.1,&gt;0.1.5 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (0.2.1)
-Requirement already satisfied: timm&lt;0.7.0 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (0.6.12)
-Requirement already satisfied: text-unidecode&lt;=1.3 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (1.3)
-Requirement already satisfied: smart-open&lt;5.3.0,&gt;=5.2.1 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (5.2.1)
-Requirement already satisfied: fairscale&lt;=0.4.6,&gt;=0.4.5 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (0.4.6)
-Requirement already satisfied: accelerate&lt;0.14,&gt;=0.9 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (0.13.2)
-Requirement already satisfied: torchtext&lt;0.14.0 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (0.13.1)
-Requirement already satisfied: nlpaug&lt;=1.1.10,&gt;=1.1.10 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (1.1.10)
-Requirement already satisfied: jsonschema&lt;=4.8.0 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (4.8.0)
-Requirement already satisfied: omegaconf&lt;2.2.0,&gt;=2.1.1 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (2.1.2)
-Requirement already satisfied: torchvision&lt;0.14.0 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (0.13.1)
-Requirement already satisfied: sentencepiece&lt;0.2.0,&gt;=0.1.95 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (0.1.97)
-Requirement already satisfied: transformers&lt;4.24.0,&gt;=4.23.0 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.0-&gt;autogluon) (4.23.1)
-Requirement already satisfied: networkx&lt;3.0,&gt;=2.3 in /usr/local/lib/python3.8/site-packages (from autogluon.tabular[all]==0.6.0-&gt;autogluon) (2.8.8)
-Requirement already satisfied: fastai&lt;2.8,&gt;=2.3.1 in /usr/local/lib/python3.8/site-packages (from autogluon.tabular[all]==0.6.0-&gt;autogluon) (2.7.10)
-Requirement already satisfied: xgboost&lt;1.8,&gt;=1.6 in /usr/local/lib/python3.8/site-packages (from autogluon.tabular[all]==0.6.0-&gt;autogluon) (1.7.2)
-Requirement already satisfied: catboost&lt;1.2,&gt;=1.0 in /usr/local/lib/python3.8/site-packages (from autogluon.tabular[all]==0.6.0-&gt;autogluon) (1.1.1)
-Requirement already satisfied: lightgbm&lt;3.4,&gt;=3.3 in /usr/local/lib/python3.8/site-packages (from autogluon.tabular[all]==0.6.0-&gt;autogluon) (3.3.3)
-Requirement already satisfied: gluonts~=0.11.0 in /usr/local/lib/python3.8/site-packages (from autogluon.timeseries[all]==0.6.0-&gt;autogluon) (0.11.4)
-Requirement already satisfied: joblib~=1.1 in /usr/local/lib/python3.8/site-packages (from autogluon.timeseries[all]==0.6.0-&gt;autogluon) (1.2.0)
-Requirement already satisfied: statsmodels~=0.13.0 in /usr/local/lib/python3.8/site-packages (from autogluon.timeseries[all]==0.6.0-&gt;autogluon) (0.13.5)
-Requirement already satisfied: tbats~=1.1 in /usr/local/lib/python3.8/site-packages (from autogluon.timeseries[all]==0.6.0-&gt;autogluon) (1.1.2)
-Requirement already satisfied: pmdarima~=1.8.2 in /usr/local/lib/python3.8/site-packages (from autogluon.timeseries[all]==0.6.0-&gt;autogluon) (1.8.5)
-Requirement already satisfied: sktime&lt;0.14,&gt;=0.13.1 in /usr/local/lib/python3.8/site-packages (from autogluon.timeseries[all]==0.6.0-&gt;autogluon) (0.13.4)
-Requirement already satisfied: gluoncv&lt;0.10.6,&gt;=0.10.5 in /usr/local/lib/python3.8/site-packages (from autogluon.vision==0.6.0-&gt;autogluon) (0.10.5.post0)
-Requirement already satisfied: setuptools in /usr/local/lib/python3.8/site-packages (from autogluon.common==0.6.0-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (65.6.3)
-Requirement already satisfied: pyyaml in /usr/local/lib/python3.8/site-packages (from accelerate&lt;0.14,&gt;=0.9-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (5.4.1)
-Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.8/site-packages (from accelerate&lt;0.14,&gt;=0.9-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (21.3)
-Requirement already satisfied: qudida&gt;=0.0.4 in /usr/local/lib/python3.8/site-packages (from albumentations&lt;=1.2.0,&gt;=1.1.0-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.0.4)
-Requirement already satisfied: opencv-python-headless&gt;=4.1.1 in /usr/local/lib/python3.8/site-packages (from albumentations&lt;=1.2.0,&gt;=1.1.0-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (4.6.0.66)
-Requirement already satisfied: plotly in /usr/local/lib/python3.8/site-packages (from catboost&lt;1.2,&gt;=1.0-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (5.11.0)
-Requirement already satisfied: six in /usr/local/lib/python3.8/site-packages (from catboost&lt;1.2,&gt;=1.0-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (1.16.0)
-Requirement already satisfied: graphviz in /usr/local/lib/python3.8/site-packages (from catboost&lt;1.2,&gt;=1.0-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (0.8.4)
-Requirement already satisfied: toolz&gt;=0.8.2 in /usr/local/lib/python3.8/site-packages (from dask&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (0.12.0)
-Requirement already satisfied: partd&gt;=0.3.10 in /usr/local/lib/python3.8/site-packages (from dask&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (1.3.0)
-Requirement already satisfied: cloudpickle&gt;=1.1.1 in /usr/local/lib/python3.8/site-packages (from dask&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (2.2.0)
-Requirement already satisfied: fsspec&gt;=0.6.0 in /usr/local/lib/python3.8/site-packages (from dask&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (2022.11.0)
-Requirement already satisfied: msgpack&gt;=0.6.0 in /usr/local/lib/python3.8/site-packages (from distributed&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (1.0.4)
-Requirement already satisfied: tblib&gt;=1.6.0 in /usr/local/lib/python3.8/site-packages (from distributed&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (1.7.0)
-Requirement already satisfied: tornado&gt;=6.0.3 in /usr/local/lib/python3.8/site-packages (from distributed&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (6.2)
-Requirement already satisfied: sortedcontainers!=2.0.0,!=2.0.1 in /usr/local/lib/python3.8/site-packages (from distributed&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (2.4.0)
-Requirement already satisfied: jinja2 in /usr/local/lib/python3.8/site-packages (from distributed&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (3.1.2)
-Requirement already satisfied: click&gt;=6.6 in /usr/local/lib/python3.8/site-packages (from distributed&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (8.0.4)
-Requirement already satisfied: zict&gt;=0.1.3 in /usr/local/lib/python3.8/site-packages (from distributed&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (2.2.0)
-Requirement already satisfied: datasets&gt;=2.0.0 in /usr/local/lib/python3.8/site-packages (from evaluate&lt;=0.2.2-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (2.7.1)
-Requirement already satisfied: huggingface-hub&gt;=0.7.0 in /usr/local/lib/python3.8/site-packages (from evaluate&lt;=0.2.2-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.11.1)
-Requirement already satisfied: responses&lt;0.19 in /usr/local/lib/python3.8/site-packages (from evaluate&lt;=0.2.2-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.18.0)
-Requirement already satisfied: multiprocess in /usr/local/lib/python3.8/site-packages (from evaluate&lt;=0.2.2-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.70.14)
-Requirement already satisfied: xxhash in /usr/local/lib/python3.8/site-packages (from evaluate&lt;=0.2.2-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (3.1.0)
-Requirement already satisfied: dill in /usr/local/lib/python3.8/site-packages (from evaluate&lt;=0.2.2-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.3.6)
-Requirement already satisfied: pip in /usr/local/lib/python3.8/site-packages (from fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (22.3.1)
-Requirement already satisfied: fastprogress&gt;=0.2.4 in /usr/local/lib/python3.8/site-packages (from fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (1.0.3)
-Requirement already satisfied: spacy&lt;4 in /usr/local/lib/python3.8/site-packages (from fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (3.4.3)
-Requirement already satisfied: fastdownload&lt;2,&gt;=0.0.5 in /usr/local/lib/python3.8/site-packages (from fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (0.0.7)
-Requirement already satisfied: fastcore&lt;1.6,&gt;=1.4.5 in /usr/local/lib/python3.8/site-packages (from fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (1.5.27)
-Requirement already satisfied: portalocker in /usr/local/lib/python3.8/site-packages (from gluoncv&lt;0.10.6,&gt;=0.10.5-&gt;autogluon.vision==0.6.0-&gt;autogluon) (2.6.0)
-Requirement already satisfied: opencv-python in /usr/local/lib/python3.8/site-packages (from gluoncv&lt;0.10.6,&gt;=0.10.5-&gt;autogluon.vision==0.6.0-&gt;autogluon) (4.6.0.66)
-Requirement already satisfied: autocfg in /usr/local/lib/python3.8/site-packages (from gluoncv&lt;0.10.6,&gt;=0.10.5-&gt;autogluon.vision==0.6.0-&gt;autogluon) (0.0.8)
-Requirement already satisfied: yacs in /usr/local/lib/python3.8/site-packages (from gluoncv&lt;0.10.6,&gt;=0.10.5-&gt;autogluon.vision==0.6.0-&gt;autogluon) (0.1.8)
-Requirement already satisfied: pydantic~=1.7 in /usr/local/lib/python3.8/site-packages (from gluonts~=0.11.0-&gt;autogluon.timeseries[all]==0.6.0-&gt;autogluon) (1.10.2)
-Requirement already satisfied: typing-extensions~=4.0 in /usr/local/lib/python3.8/site-packages (from gluonts~=0.11.0-&gt;autogluon.timeseries[all]==0.6.0-&gt;autogluon) (4.4.0)
-Requirement already satisfied: py4j in /usr/local/lib/python3.8/site-packages (from hyperopt&lt;0.2.8,&gt;=0.2.7-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (0.10.9.7)
-Requirement already satisfied: future in /usr/local/lib/python3.8/site-packages (from hyperopt&lt;0.2.8,&gt;=0.2.7-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (0.18.2)
-Requirement already satisfied: importlib-resources&gt;=1.4.0 in /usr/local/lib/python3.8/site-packages (from jsonschema&lt;=4.8.0-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (5.10.1)
-Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in /usr/local/lib/python3.8/site-packages (from jsonschema&lt;=4.8.0-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.19.2)
-Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.8/site-packages (from jsonschema&lt;=4.8.0-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (22.1.0)
-Requirement already satisfied: wheel in /usr/local/lib/python3.8/site-packages (from lightgbm&lt;3.4,&gt;=3.3-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (0.38.4)
-Requirement already satisfied: regex&gt;=2021.8.3 in /usr/local/lib/python3.8/site-packages (from nltk&lt;4.0.0,&gt;=3.4.5-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (2022.10.31)
-Requirement already satisfied: typish&gt;=1.7.0 in /usr/local/lib/python3.8/site-packages (from nptyping&lt;1.5.0,&gt;=1.4.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (1.9.3)
-Requirement already satisfied: antlr4-python3-runtime==4.8 in /usr/local/lib/python3.8/site-packages (from omegaconf&lt;2.2.0,&gt;=2.1.1-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (4.8)
-Requirement already satisfied: rich in /usr/local/lib/python3.8/site-packages (from openmim&lt;=0.2.1,&gt;0.1.5-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (12.6.0)
-Requirement already satisfied: model-index in /usr/local/lib/python3.8/site-packages (from openmim&lt;=0.2.1,&gt;0.1.5-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.1.11)
-Requirement already satisfied: tabulate in /usr/local/lib/python3.8/site-packages (from openmim&lt;=0.2.1,&gt;0.1.5-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.9.0)
-Requirement already satisfied: colorama in /usr/local/lib/python3.8/site-packages (from openmim&lt;=0.2.1,&gt;0.1.5-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.4.4)
-Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.8/site-packages (from pandas!=1.4.0,&lt;1.6,&gt;=1.2.5-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (2022.6)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.8/site-packages (from pandas!=1.4.0,&lt;1.6,&gt;=1.2.5-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (2.8.2)
-Requirement already satisfied: urllib3 in /usr/local/lib/python3.8/site-packages (from pmdarima~=1.8.2-&gt;autogluon.timeseries[all]==0.6.0-&gt;autogluon) (1.26.13)
-Requirement already satisfied: Cython!=0.29.18,&gt;=0.29 in /usr/local/lib/python3.8/site-packages (from pmdarima~=1.8.2-&gt;autogluon.timeseries[all]==0.6.0-&gt;autogluon) (0.29.32)
-Requirement already satisfied: pyparsing&gt;=2.2.1 in /usr/local/lib/python3.8/site-packages (from matplotlib-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (3.0.9)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.8/site-packages (from matplotlib-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (0.11.0)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.8/site-packages (from matplotlib-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (1.0.6)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.8/site-packages (from matplotlib-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (4.38.0)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.8/site-packages (from matplotlib-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (1.4.4)
-Requirement already satisfied: tensorboard&gt;=2.9.1 in /usr/local/lib/python3.8/site-packages (from pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (2.11.0)
-Requirement already satisfied: pyDeprecate&gt;=0.3.1 in /usr/local/lib/python3.8/site-packages (from pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.3.2)
-Requirement already satisfied: filelock in /usr/local/lib/python3.8/site-packages (from ray&lt;2.1,&gt;=2.0-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (3.8.2)
-Requirement already satisfied: grpcio&lt;=1.43.0,&gt;=1.32.0 in /usr/local/lib/python3.8/site-packages (from ray&lt;2.1,&gt;=2.0-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (1.43.0)
-Requirement already satisfied: aiosignal in /usr/local/lib/python3.8/site-packages (from ray&lt;2.1,&gt;=2.0-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (1.3.1)
-Requirement already satisfied: virtualenv in /usr/local/lib/python3.8/site-packages (from ray&lt;2.1,&gt;=2.0-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (20.17.1)
-Requirement already satisfied: protobuf&lt;4.0.0,&gt;=3.15.3 in /usr/local/lib/python3.8/site-packages (from ray&lt;2.1,&gt;=2.0-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (3.20.1)
-Requirement already satisfied: frozenlist in /usr/local/lib/python3.8/site-packages (from ray&lt;2.1,&gt;=2.0-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (1.3.3)
-Requirement already satisfied: tensorboardX&gt;=1.9 in /usr/local/lib/python3.8/site-packages (from ray&lt;2.1,&gt;=2.0-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (2.5.1)
-Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/python3.8/site-packages (from requests-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (2.1.1)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.8/site-packages (from requests-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (3.4)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.8/site-packages (from requests-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (2022.9.24)
-Requirement already satisfied: PyWavelets&gt;=1.1.1 in /usr/local/lib/python3.8/site-packages (from scikit-image&lt;0.20.0,&gt;=0.19.1-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (1.4.1)
-Requirement already satisfied: imageio&gt;=2.4.1 in /usr/local/lib/python3.8/site-packages (from scikit-image&lt;0.20.0,&gt;=0.19.1-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (2.22.4)
-Requirement already satisfied: tifffile&gt;=2019.7.26 in /usr/local/lib/python3.8/site-packages (from scikit-image&lt;0.20.0,&gt;=0.19.1-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (2022.10.10)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.8/site-packages (from scikit-learn&lt;1.2,&gt;=1.0.0-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (3.1.0)
-Requirement already satisfied: numba&gt;=0.53 in /usr/local/lib/python3.8/site-packages (from sktime&lt;0.14,&gt;=0.13.1-&gt;autogluon.timeseries[all]==0.6.0-&gt;autogluon) (0.56.4)
-Requirement already satisfied: deprecated&gt;=1.2.13 in /usr/local/lib/python3.8/site-packages (from sktime&lt;0.14,&gt;=0.13.1-&gt;autogluon.timeseries[all]==0.6.0-&gt;autogluon) (1.2.13)
-Requirement already satisfied: patsy&gt;=0.5.2 in /usr/local/lib/python3.8/site-packages (from statsmodels~=0.13.0-&gt;autogluon.timeseries[all]==0.6.0-&gt;autogluon) (0.5.3)
-Requirement already satisfied: tokenizers!=0.11.3,&lt;0.14,&gt;=0.11.1 in /usr/local/lib/python3.8/site-packages (from transformers&lt;4.24.0,&gt;=4.23.0-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.13.2)
-Requirement already satisfied: s3transfer&lt;0.7.0,&gt;=0.6.0 in /usr/local/lib/python3.8/site-packages (from boto3-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (0.6.0)
-Requirement already satisfied: jmespath&lt;2.0.0,&gt;=0.7.1 in /usr/local/lib/python3.8/site-packages (from boto3-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (1.0.1)
-Requirement already satisfied: botocore&lt;1.30.0,&gt;=1.29.24 in /usr/local/lib/python3.8/site-packages (from boto3-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (1.29.24)
-Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/site-packages (from datasets&gt;=2.0.0-&gt;evaluate&lt;=0.2.2-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (3.8.3)
-Requirement already satisfied: pyarrow&gt;=6.0.0 in /usr/local/lib/python3.8/site-packages (from datasets&gt;=2.0.0-&gt;evaluate&lt;=0.2.2-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (10.0.1)
-Requirement already satisfied: wrapt&lt;2,&gt;=1.10 in /usr/local/lib/python3.8/site-packages (from deprecated&gt;=1.2.13-&gt;sktime&lt;0.14,&gt;=0.13.1-&gt;autogluon.timeseries[all]==0.6.0-&gt;autogluon) (1.14.1)
-Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/site-packages (from importlib-resources&gt;=1.4.0-&gt;jsonschema&lt;=4.8.0-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (3.11.0)
-Requirement already satisfied: importlib-metadata in /usr/local/lib/python3.8/site-packages (from numba&gt;=0.53-&gt;sktime&lt;0.14,&gt;=0.13.1-&gt;autogluon.timeseries[all]==0.6.0-&gt;autogluon) (5.1.0)
-Requirement already satisfied: llvmlite&lt;0.40,&gt;=0.39.0dev0 in /usr/local/lib/python3.8/site-packages (from numba&gt;=0.53-&gt;sktime&lt;0.14,&gt;=0.13.1-&gt;autogluon.timeseries[all]==0.6.0-&gt;autogluon) (0.39.1)
-Requirement already satisfied: locket in /usr/local/lib/python3.8/site-packages (from partd&gt;=0.3.10-&gt;dask&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (1.0.0)
-Requirement already satisfied: catalogue&lt;2.1.0,&gt;=2.0.6 in /usr/local/lib/python3.8/site-packages (from spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (2.0.8)
-Requirement already satisfied: langcodes&lt;4.0.0,&gt;=3.2.0 in /usr/local/lib/python3.8/site-packages (from spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (3.3.0)
-Requirement already satisfied: pathy&gt;=0.3.5 in /usr/local/lib/python3.8/site-packages (from spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (0.10.1)
-Requirement already satisfied: cymem&lt;2.1.0,&gt;=2.0.2 in /usr/local/lib/python3.8/site-packages (from spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (2.0.7)
-Requirement already satisfied: preshed&lt;3.1.0,&gt;=3.0.2 in /usr/local/lib/python3.8/site-packages (from spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (3.0.8)
-Requirement already satisfied: srsly&lt;3.0.0,&gt;=2.4.3 in /usr/local/lib/python3.8/site-packages (from spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (2.4.5)
-Requirement already satisfied: wasabi&lt;1.1.0,&gt;=0.9.1 in /usr/local/lib/python3.8/site-packages (from spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (0.10.1)
-Requirement already satisfied: murmurhash&lt;1.1.0,&gt;=0.28.0 in /usr/local/lib/python3.8/site-packages (from spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (1.0.9)
-Requirement already satisfied: typer&lt;0.8.0,&gt;=0.3.0 in /usr/local/lib/python3.8/site-packages (from spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (0.7.0)
-Requirement already satisfied: spacy-legacy&lt;3.1.0,&gt;=3.0.10 in /usr/local/lib/python3.8/site-packages (from spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (3.0.10)
-Requirement already satisfied: spacy-loggers&lt;2.0.0,&gt;=1.0.0 in /usr/local/lib/python3.8/site-packages (from spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (1.0.4)
-Requirement already satisfied: thinc&lt;8.2.0,&gt;=8.1.0 in /usr/local/lib/python3.8/site-packages (from spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (8.1.5)
-Requirement already satisfied: tensorboard-data-server&lt;0.7.0,&gt;=0.6.0 in /usr/local/lib/python3.8/site-packages (from tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.6.1)
-Requirement already satisfied: tensorboard-plugin-wit&gt;=1.6.0 in /usr/local/lib/python3.8/site-packages (from tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (1.8.1)
-Requirement already satisfied: werkzeug&gt;=1.0.1 in /usr/local/lib/python3.8/site-packages (from tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (2.2.2)
-Requirement already satisfied: markdown&gt;=2.6.8 in /usr/local/lib/python3.8/site-packages (from tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (3.4.1)
-Requirement already satisfied: google-auth&lt;3,&gt;=1.6.3 in /usr/local/lib/python3.8/site-packages (from tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (2.15.0)
-Requirement already satisfied: absl-py&gt;=0.4 in /usr/local/lib/python3.8/site-packages (from tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (1.3.0)
-Requirement already satisfied: google-auth-oauthlib&lt;0.5,&gt;=0.4.1 in /usr/local/lib/python3.8/site-packages (from tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.4.6)
-Requirement already satisfied: heapdict in /usr/local/lib/python3.8/site-packages (from zict&gt;=0.1.3-&gt;distributed&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (1.0.1)
-Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.8/site-packages (from jinja2-&gt;distributed&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (2.1.1)
-Requirement already satisfied: ordered-set in /usr/local/lib/python3.8/site-packages (from model-index-&gt;openmim&lt;=0.2.1,&gt;0.1.5-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (4.1.0)
-Requirement already satisfied: tenacity&gt;=6.2.0 in /usr/local/lib/python3.8/site-packages (from plotly-&gt;catboost&lt;1.2,&gt;=1.0-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (8.1.0)
-Requirement already satisfied: commonmark&lt;0.10.0,&gt;=0.9.0 in /usr/local/lib/python3.8/site-packages (from rich-&gt;openmim&lt;=0.2.1,&gt;0.1.5-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.9.1)
-Requirement already satisfied: pygments&lt;3.0.0,&gt;=2.6.0 in /usr/local/lib/python3.8/site-packages (from rich-&gt;openmim&lt;=0.2.1,&gt;0.1.5-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (2.13.0)
-Requirement already satisfied: platformdirs&lt;3,&gt;=2.4 in /usr/local/lib/python3.8/site-packages (from virtualenv-&gt;ray&lt;2.1,&gt;=2.0-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (2.6.0)
-Requirement already satisfied: distlib&lt;1,&gt;=0.3.6 in /usr/local/lib/python3.8/site-packages (from virtualenv-&gt;ray&lt;2.1,&gt;=2.0-&gt;autogluon.core[all]==0.6.0-&gt;autogluon) (0.3.6)
-Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/site-packages (from aiohttp-&gt;datasets&gt;=2.0.0-&gt;evaluate&lt;=0.2.2-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (4.0.2)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/site-packages (from aiohttp-&gt;datasets&gt;=2.0.0-&gt;evaluate&lt;=0.2.2-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (6.0.3)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/site-packages (from aiohttp-&gt;datasets&gt;=2.0.0-&gt;evaluate&lt;=0.2.2-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (1.8.2)
-Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in /usr/local/lib/python3.8/site-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (4.7.2)
-Requirement already satisfied: cachetools&lt;6.0,&gt;=2.0.0 in /usr/local/lib/python3.8/site-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (5.2.0)
-Requirement already satisfied: pyasn1-modules&gt;=0.2.1 in /usr/local/lib/python3.8/site-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.2.8)
-Requirement already satisfied: requests-oauthlib&gt;=0.7.0 in /usr/local/lib/python3.8/site-packages (from google-auth-oauthlib&lt;0.5,&gt;=0.4.1-&gt;tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (1.3.1)
-Requirement already satisfied: confection&lt;1.0.0,&gt;=0.0.1 in /usr/local/lib/python3.8/site-packages (from thinc&lt;8.2.0,&gt;=8.1.0-&gt;spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (0.0.3)
-Requirement already satisfied: blis&lt;0.8.0,&gt;=0.7.8 in /usr/local/lib/python3.8/site-packages (from thinc&lt;8.2.0,&gt;=8.1.0-&gt;spacy&lt;4-&gt;fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.0-&gt;autogluon) (0.7.9)
-Requirement already satisfied: pyasn1&lt;0.5.0,&gt;=0.4.6 in /usr/local/lib/python3.8/site-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (0.4.8)
-Requirement already satisfied: oauthlib&gt;=3.0.0 in /usr/local/lib/python3.8/site-packages (from requests-oauthlib&gt;=0.7.0-&gt;google-auth-oauthlib&lt;0.5,&gt;=0.4.1-&gt;tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.0-&gt;autogluon) (3.2.2)
+</span>Collecting autogluon
+  Downloading autogluon-0.6.1-py3-none-any.whl (9.8 kB)
+Collecting autogluon.timeseries[all]==0.6.1
+  Downloading autogluon.timeseries-0.6.1-py3-none-any.whl (103 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">103.0/103.0 kB</span> <span class="ansi-red-fg">220.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting autogluon.features==0.6.1
+  Downloading autogluon.features-0.6.1-py3-none-any.whl (59 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">60.0/60.0 kB</span> <span class="ansi-red-fg">210.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting autogluon.multimodal==0.6.1
+  Downloading autogluon.multimodal-0.6.1-py3-none-any.whl (289 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">289.7/289.7 kB</span> <span class="ansi-red-fg">295.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting autogluon.tabular[all]==0.6.1
+  Downloading autogluon.tabular-0.6.1-py3-none-any.whl (286 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">286.0/286.0 kB</span> <span class="ansi-red-fg">280.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting autogluon.text==0.6.1
+  Downloading autogluon.text-0.6.1-py3-none-any.whl (62 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">62.1/62.1 kB</span> <span class="ansi-red-fg">214.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting autogluon.vision==0.6.1
+  Downloading autogluon.vision-0.6.1-py3-none-any.whl (49 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">49.8/49.8 kB</span> <span class="ansi-red-fg">214.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting autogluon.core[all]==0.6.1
+  Downloading autogluon.core-0.6.1-py3-none-any.whl (226 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">226.6/226.6 kB</span> <span class="ansi-red-fg">304.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting pandas!=1.4.0,&lt;1.6,&gt;=1.2.5
+  Downloading pandas-1.5.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.2 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">12.2/12.2 MB</span> <span class="ansi-red-fg">178.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting matplotlib
+  Downloading matplotlib-3.6.2-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (9.4 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">9.4/9.4 MB</span> <span class="ansi-red-fg">203.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting numpy&lt;1.24,&gt;=1.21
+  Downloading numpy-1.23.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">17.1/17.1 MB</span> <span class="ansi-red-fg">161.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting dask&lt;=2021.11.2,&gt;=2021.09.1
+  Downloading dask-2021.11.2-py3-none-any.whl (1.0 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.0/1.0 MB</span> <span class="ansi-red-fg">347.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: boto3 in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.1-&gt;autogluon) (1.26.24)
+Collecting scipy&lt;1.10.0,&gt;=1.5.4
+  Downloading scipy-1.9.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (33.8 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">33.8/33.8 MB</span> <span class="ansi-red-fg">216.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting distributed&lt;=2021.11.2,&gt;=2021.09.1
+  Downloading distributed-2021.11.2-py3-none-any.whl (802 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">802.2/802.2 kB</span> <span class="ansi-red-fg">339.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting autogluon.common==0.6.1
+  Downloading autogluon.common-0.6.1-py3-none-any.whl (41 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">41.5/41.5 kB</span> <span class="ansi-red-fg">125.6 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting scikit-learn&lt;1.2,&gt;=1.0.0
+  Downloading scikit_learn-1.1.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (31.2 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">31.2/31.2 MB</span> <span class="ansi-red-fg">150.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting tqdm&gt;=4.38.0
+  Downloading tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">78.5/78.5 kB</span> <span class="ansi-red-fg">244.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: requests in /usr/local/lib/python3.8/site-packages (from autogluon.core[all]==0.6.1-&gt;autogluon) (2.28.1)
+Collecting ray&lt;2.1,&gt;=2.0
+  Downloading ray-2.0.1-cp38-cp38-manylinux2014_x86_64.whl (60.2 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">60.2/60.2 MB</span> <span class="ansi-red-fg">159.6 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>00:0100:01
+Collecting hyperopt&lt;0.2.8,&gt;=0.2.7
+  Downloading hyperopt-0.2.7-py2.py3-none-any.whl (1.6 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.6/1.6 MB</span> <span class="ansi-red-fg">294.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: psutil&lt;6,&gt;=5.7.3 in /usr/local/lib/python3.8/site-packages (from autogluon.features==0.6.1-&gt;autogluon) (5.9.4)
+Collecting timm&lt;0.7.0
+  Downloading timm-0.6.12-py3-none-any.whl (549 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">549.1/549.1 kB</span> <span class="ansi-red-fg">333.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting scikit-image&lt;0.20.0,&gt;=0.19.1
+  Downloading scikit_image-0.19.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (14.0 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">14.0/14.0 MB</span> <span class="ansi-red-fg">143.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting fairscale&lt;=0.4.6,&gt;=0.4.5
+  Downloading fairscale-0.4.6.tar.gz (248 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">248.2/248.2 kB</span> <span class="ansi-red-fg">109.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting defusedxml&lt;=0.7.1,&gt;=0.7.1
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Collecting evaluate&lt;=0.3.0
+  Downloading evaluate-0.3.0-py3-none-any.whl (72 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">72.9/72.9 kB</span> <span class="ansi-red-fg">246.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting albumentations&lt;=1.2.0,&gt;=1.1.0
+  Downloading albumentations-1.2.0-py3-none-any.whl (113 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">113.5/113.5 kB</span> <span class="ansi-red-fg">273.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting transformers&lt;4.24.0,&gt;=4.23.0
+  Downloading transformers-4.23.1-py3-none-any.whl (5.3 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">5.3/5.3 MB</span> <span class="ansi-red-fg">260.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting smart-open&lt;5.3.0,&gt;=5.2.1
+  Downloading smart_open-5.2.1-py3-none-any.whl (58 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">58.6/58.6 kB</span> <span class="ansi-red-fg">227.8 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting text-unidecode&lt;=1.3
+  Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">78.2/78.2 kB</span> <span class="ansi-red-fg">255.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting nlpaug&lt;=1.1.10,&gt;=1.1.10
+  Downloading nlpaug-1.1.10-py3-none-any.whl (410 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">410.8/410.8 kB</span> <span class="ansi-red-fg">320.8 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting accelerate&lt;0.14,&gt;=0.9
+  Downloading accelerate-0.13.2-py3-none-any.whl (148 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">148.8/148.8 kB</span> <span class="ansi-red-fg">285.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting nltk&lt;4.0.0,&gt;=3.4.5
+  Downloading nltk-3.8-py3-none-any.whl (1.5 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.5/1.5 MB</span> <span class="ansi-red-fg">310.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting torch&lt;1.13,&gt;=1.9
+  Downloading torch-1.12.1-cp38-cp38-manylinux1_x86_64.whl (776.3 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">776.3/776.3 MB</span> <span class="ansi-red-fg">40.8 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>00:0100:01
+Collecting pytorch-lightning&lt;1.8.0,&gt;=1.7.4
+  Downloading pytorch_lightning-1.7.7-py3-none-any.whl (708 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">708.1/708.1 kB</span> <span class="ansi-red-fg">332.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting openmim&lt;=0.2.1,&gt;0.1.5
+  Downloading openmim-0.2.1-py2.py3-none-any.whl (49 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">49.7/49.7 kB</span> <span class="ansi-red-fg">143.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: Pillow&lt;=9.4.0,&gt;=9.3.0 in /usr/local/lib/python3.8/site-packages (from autogluon.multimodal==0.6.1-&gt;autogluon) (9.3.0)
+Collecting torchtext&lt;0.14.0
+  Downloading torchtext-0.13.1-cp38-cp38-manylinux1_x86_64.whl (1.9 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.9/1.9 MB</span> <span class="ansi-red-fg">231.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting jsonschema&lt;=4.8.0
+  Downloading jsonschema-4.8.0-py3-none-any.whl (81 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">81.4/81.4 kB</span> <span class="ansi-red-fg">246.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting nptyping&lt;1.5.0,&gt;=1.4.4
+  Downloading nptyping-1.4.4-py3-none-any.whl (31 kB)
+Collecting omegaconf&lt;2.2.0,&gt;=2.1.1
+  Downloading omegaconf-2.1.2-py3-none-any.whl (74 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">74.7/74.7 kB</span> <span class="ansi-red-fg">253.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting sentencepiece&lt;0.2.0,&gt;=0.1.95
+  Downloading sentencepiece-0.1.97-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.3/1.3 MB</span> <span class="ansi-red-fg">308.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting pytorch-metric-learning&lt;1.4.0,&gt;=1.3.0
+  Downloading pytorch_metric_learning-1.3.2-py3-none-any.whl (109 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">109.4/109.4 kB</span> <span class="ansi-red-fg">278.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting torchvision&lt;0.14.0
+  Downloading torchvision-0.13.1-cp38-cp38-manylinux1_x86_64.whl (19.1 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">19.1/19.1 MB</span> <span class="ansi-red-fg">83.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting torchmetrics&lt;0.9.0,&gt;=0.8.0
+  Downloading torchmetrics-0.8.2-py3-none-any.whl (409 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">409.8/409.8 kB</span> <span class="ansi-red-fg">186.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting seqeval&lt;=1.2.2
+  Downloading seqeval-1.2.2.tar.gz (43 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">43.6/43.6 kB</span> <span class="ansi-red-fg">208.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+  Preparing metadata (setup.py) ... done
+Collecting networkx&lt;3.0,&gt;=2.3
+  Downloading networkx-2.8.8-py3-none-any.whl (2.0 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">2.0/2.0 MB</span> <span class="ansi-red-fg">289.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting catboost&lt;1.2,&gt;=1.0
+  Downloading catboost-1.1.1-cp38-none-manylinux1_x86_64.whl (76.6 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">76.6/76.6 MB</span> <span class="ansi-red-fg">156.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting xgboost&lt;1.8,&gt;=1.6
+  Downloading xgboost-1.7.2-py3-none-manylinux2014_x86_64.whl (193.6 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">193.6/193.6 MB</span> <span class="ansi-red-fg">238.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting fastai&lt;2.8,&gt;=2.3.1
+  Downloading fastai-2.7.10-py3-none-any.whl (240 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">240.9/240.9 kB</span> <span class="ansi-red-fg">310.6 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting lightgbm&lt;3.4,&gt;=3.3
+  Downloading lightgbm-3.3.3-py3-none-manylinux1_x86_64.whl (2.0 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">2.0/2.0 MB</span> <span class="ansi-red-fg">312.8 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting statsmodels~=0.13.0
+  Downloading statsmodels-0.13.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (9.9 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">9.9/9.9 MB</span> <span class="ansi-red-fg">223.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting psutil&lt;6,&gt;=5.7.3
+  Downloading psutil-5.8.0-cp38-cp38-manylinux2010_x86_64.whl (296 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">296.0/296.0 kB</span> <span class="ansi-red-fg">334.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting gluonts~=0.11.0
+  Downloading gluonts-0.11.5-py3-none-any.whl (1.0 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.0/1.0 MB</span> <span class="ansi-red-fg">339.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting joblib~=1.1
+  Downloading joblib-1.2.0-py3-none-any.whl (297 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">298.0/298.0 kB</span> <span class="ansi-red-fg">290.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting pmdarima~=1.8.2
+  Downloading pmdarima-1.8.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (1.5 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.5/1.5 MB</span> <span class="ansi-red-fg">341.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting sktime&lt;0.14,&gt;=0.13.1
+  Downloading sktime-0.13.4-py3-none-any.whl (7.0 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">7.0/7.0 MB</span> <span class="ansi-red-fg">164.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting tbats~=1.1
+  Downloading tbats-1.1.2-py3-none-any.whl (43 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">43.8/43.8 kB</span> <span class="ansi-red-fg">185.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting gluoncv&lt;0.10.6,&gt;=0.10.5
+  Downloading gluoncv-0.10.5.post0-py2.py3-none-any.whl (1.3 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.3/1.3 MB</span> <span class="ansi-red-fg">333.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: setuptools in /usr/local/lib/python3.8/site-packages (from autogluon.common==0.6.1-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (65.6.3)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.8/site-packages (from accelerate&lt;0.14,&gt;=0.9-&gt;autogluon.multimodal==0.6.1-&gt;autogluon) (21.3)
+Requirement already satisfied: pyyaml in /usr/local/lib/python3.8/site-packages (from accelerate&lt;0.14,&gt;=0.9-&gt;autogluon.multimodal==0.6.1-&gt;autogluon) (5.4.1)
+Collecting opencv-python-headless&gt;=4.1.1
+  Downloading opencv_python_headless-4.6.0.66-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (48.3 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">48.3/48.3 MB</span> <span class="ansi-red-fg">208.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting qudida&gt;=0.0.4
+  Downloading qudida-0.0.4-py3-none-any.whl (3.5 kB)
+Collecting albumentations&lt;=1.2.0,&gt;=1.1.0
+  Downloading albumentations-1.1.0-py3-none-any.whl (102 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">102.4/102.4 kB</span> <span class="ansi-red-fg">260.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: six in /usr/local/lib/python3.8/site-packages (from catboost&lt;1.2,&gt;=1.0-&gt;autogluon.tabular[all]==0.6.1-&gt;autogluon) (1.16.0)
+Collecting plotly
+  Downloading plotly-5.11.0-py2.py3-none-any.whl (15.3 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">15.3/15.3 MB</span> <span class="ansi-red-fg">155.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Requirement already satisfied: graphviz in /usr/local/lib/python3.8/site-packages (from catboost&lt;1.2,&gt;=1.0-&gt;autogluon.tabular[all]==0.6.1-&gt;autogluon) (0.8.4)
+Collecting cloudpickle&gt;=1.1.1
+  Downloading cloudpickle-2.2.0-py3-none-any.whl (25 kB)
+Collecting partd&gt;=0.3.10
+  Downloading partd-1.3.0-py3-none-any.whl (18 kB)
+Collecting toolz&gt;=0.8.2
+  Downloading toolz-0.12.0-py3-none-any.whl (55 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">55.8/55.8 kB</span> <span class="ansi-red-fg">220.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting fsspec&gt;=0.6.0
+  Downloading fsspec-2022.11.0-py3-none-any.whl (139 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">139.5/139.5 kB</span> <span class="ansi-red-fg">291.8 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting sortedcontainers!=2.0.0,!=2.0.1
+  Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Collecting msgpack&gt;=0.6.0
+  Downloading msgpack-1.0.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (322 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">322.5/322.5 kB</span> <span class="ansi-red-fg">310.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.8/site-packages (from distributed&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (3.1.2)
+Collecting zict&gt;=0.1.3
+  Downloading zict-2.2.0-py2.py3-none-any.whl (23 kB)
+Requirement already satisfied: tornado&gt;=6.0.3 in /usr/local/lib/python3.8/site-packages (from distributed&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (6.2)
+Collecting tblib&gt;=1.6.0
+  Downloading tblib-1.7.0-py2.py3-none-any.whl (12 kB)
+Requirement already satisfied: click&gt;=6.6 in /usr/local/lib/python3.8/site-packages (from distributed&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (8.1.3)
+Collecting multiprocess
+  Downloading multiprocess-0.70.14-py38-none-any.whl (132 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">132.0/132.0 kB</span> <span class="ansi-red-fg">252.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting datasets&gt;=2.0.0
+  Downloading datasets-2.8.0-py3-none-any.whl (452 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">452.9/452.9 kB</span> <span class="ansi-red-fg">322.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting responses&lt;0.19
+  Downloading responses-0.18.0-py3-none-any.whl (38 kB)
+Collecting huggingface-hub&gt;=0.7.0
+  Downloading huggingface_hub-0.11.1-py3-none-any.whl (182 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">182.4/182.4 kB</span> <span class="ansi-red-fg">295.8 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting dill
+  Downloading dill-0.3.6-py3-none-any.whl (110 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">110.5/110.5 kB</span> <span class="ansi-red-fg">280.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting xxhash
+  Downloading xxhash-3.1.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (212 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">212.9/212.9 kB</span> <span class="ansi-red-fg">290.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: pip in /usr/local/lib/python3.8/site-packages (from fastai&lt;2.8,&gt;=2.3.1-&gt;autogluon.tabular[all]==0.6.1-&gt;autogluon) (22.3.1)
+Collecting spacy&lt;4
+  Downloading spacy-3.4.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.6 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">6.6/6.6 MB</span> <span class="ansi-red-fg">202.8 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting fastcore&lt;1.6,&gt;=1.4.5
+  Downloading fastcore-1.5.27-py3-none-any.whl (67 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">67.1/67.1 kB</span> <span class="ansi-red-fg">30.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting fastprogress&gt;=0.2.4
+  Downloading fastprogress-1.0.3-py3-none-any.whl (12 kB)
+Collecting fastdownload&lt;2,&gt;=0.0.5
+  Downloading fastdownload-0.0.7-py3-none-any.whl (12 kB)
+Collecting opencv-python
+  Downloading opencv_python-4.6.0.66-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (60.9 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">60.9/60.9 MB</span> <span class="ansi-red-fg">156.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting portalocker
+  Downloading portalocker-2.6.0-py2.py3-none-any.whl (15 kB)
+Collecting yacs
+  Downloading yacs-0.1.8-py3-none-any.whl (14 kB)
+Collecting autocfg
+  Downloading autocfg-0.0.8-py3-none-any.whl (13 kB)
+Collecting pydantic~=1.7
+  Downloading pydantic-1.10.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.6 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">13.6/13.6 MB</span> <span class="ansi-red-fg">234.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Requirement already satisfied: typing-extensions~=4.0 in /usr/local/lib/python3.8/site-packages (from gluonts~=0.11.0-&gt;autogluon.timeseries[all]==0.6.1-&gt;autogluon) (4.4.0)
+Collecting future
+  Downloading future-0.18.2.tar.gz (829 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">829.2/829.2 kB</span> <span class="ansi-red-fg">338.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+  Preparing metadata (setup.py) ... done
+Collecting py4j
+  Downloading py4j-0.10.9.7-py2.py3-none-any.whl (200 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">200.5/200.5 kB</span> <span class="ansi-red-fg">169.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting importlib-resources&gt;=1.4.0
+  Downloading importlib_resources-5.10.1-py3-none-any.whl (34 kB)
+Collecting pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0
+  Downloading pyrsistent-0.19.2-py3-none-any.whl (57 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">57.5/57.5 kB</span> <span class="ansi-red-fg">216.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting attrs&gt;=17.4.0
+  Downloading attrs-22.1.0-py2.py3-none-any.whl (58 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">58.8/58.8 kB</span> <span class="ansi-red-fg">139.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: wheel in /usr/local/lib/python3.8/site-packages (from lightgbm&lt;3.4,&gt;=3.3-&gt;autogluon.tabular[all]==0.6.1-&gt;autogluon) (0.38.4)
+Collecting regex&gt;=2021.8.3
+  Downloading regex-2022.10.31-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (772 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">772.3/772.3 kB</span> <span class="ansi-red-fg">334.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting typish&gt;=1.7.0
+  Downloading typish-1.9.3-py3-none-any.whl (45 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">45.1/45.1 kB</span> <span class="ansi-red-fg">192.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting antlr4-python3-runtime==4.8
+  Downloading antlr4-python3-runtime-4.8.tar.gz (112 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">112.4/112.4 kB</span> <span class="ansi-red-fg">272.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+  Preparing metadata (setup.py) ... done
+Collecting model-index
+  Downloading model_index-0.1.11-py3-none-any.whl (34 kB)
+Requirement already satisfied: colorama in /usr/local/lib/python3.8/site-packages (from openmim&lt;=0.2.1,&gt;0.1.5-&gt;autogluon.multimodal==0.6.1-&gt;autogluon) (0.4.4)
+Collecting tabulate
+  Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+Collecting rich
+  Downloading rich-12.6.0-py3-none-any.whl (237 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">237.5/237.5 kB</span> <span class="ansi-red-fg">282.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting pytz&gt;=2020.1
+  Downloading pytz-2022.7-py2.py3-none-any.whl (499 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">499.4/499.4 kB</span> <span class="ansi-red-fg">326.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.8/site-packages (from pandas!=1.4.0,&lt;1.6,&gt;=1.2.5-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (2.8.2)
+Requirement already satisfied: urllib3 in /usr/local/lib/python3.8/site-packages (from pmdarima~=1.8.2-&gt;autogluon.timeseries[all]==0.6.1-&gt;autogluon) (1.26.13)
+Collecting Cython!=0.29.18,&gt;=0.29
+  Downloading Cython-0.29.32-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (1.9 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.9/1.9 MB</span> <span class="ansi-red-fg">323.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting tensorboard&gt;=2.9.1
+  Downloading tensorboard-2.11.0-py3-none-any.whl (6.0 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">6.0/6.0 MB</span> <span class="ansi-red-fg">254.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting pyDeprecate&gt;=0.3.1
+  Downloading pyDeprecate-0.3.2-py3-none-any.whl (10 kB)
+Collecting click&gt;=6.6
+  Downloading click-8.0.4-py3-none-any.whl (97 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">97.5/97.5 kB</span> <span class="ansi-red-fg">290.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting grpcio&lt;=1.43.0,&gt;=1.32.0
+  Downloading grpcio-1.43.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.1 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">4.1/4.1 MB</span> <span class="ansi-red-fg">229.8 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting filelock
+  Downloading filelock-3.8.2-py3-none-any.whl (10 kB)
+Collecting virtualenv
+  Downloading virtualenv-20.17.1-py3-none-any.whl (8.8 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">8.8/8.8 MB</span> <span class="ansi-red-fg">229.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting frozenlist
+  Downloading frozenlist-1.3.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (161 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">161.3/161.3 kB</span> <span class="ansi-red-fg">286.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting protobuf&lt;4.0.0,&gt;=3.15.3
+  Downloading protobuf-3.20.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.0 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.0/1.0 MB</span> <span class="ansi-red-fg">198.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting aiosignal
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting tensorboardX&gt;=1.9
+  Downloading tensorboardX-2.5.1-py2.py3-none-any.whl (125 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">125.4/125.4 kB</span> <span class="ansi-red-fg">274.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/python3.8/site-packages (from requests-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (2.1.1)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.8/site-packages (from requests-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (3.4)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.8/site-packages (from requests-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (2022.9.24)
+Collecting tifffile&gt;=2019.7.26
+  Downloading tifffile-2022.10.10-py3-none-any.whl (210 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">210.3/210.3 kB</span> <span class="ansi-red-fg">299.8 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting PyWavelets&gt;=1.1.1
+  Downloading PyWavelets-1.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.9 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">6.9/6.9 MB</span> <span class="ansi-red-fg">169.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting imageio&gt;=2.4.1
+  Downloading imageio-2.23.0-py3-none-any.whl (3.4 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">3.4/3.4 MB</span> <span class="ansi-red-fg">298.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting threadpoolctl&gt;=2.0.0
+  Downloading threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Collecting deprecated&gt;=1.2.13
+  Downloading Deprecated-1.2.13-py2.py3-none-any.whl (9.6 kB)
+Collecting numba&gt;=0.53
+  Downloading numba-0.56.4-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.5 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">3.5/3.5 MB</span> <span class="ansi-red-fg">272.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting scipy&lt;1.10.0,&gt;=1.5.4
+  Downloading scipy-1.8.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (41.6 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">41.6/41.6 MB</span> <span class="ansi-red-fg">225.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting numpy&lt;1.24,&gt;=1.21
+  Downloading numpy-1.22.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.9 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">16.9/16.9 MB</span> <span class="ansi-red-fg">208.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting patsy&gt;=0.5.2
+  Downloading patsy-0.5.3-py2.py3-none-any.whl (233 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">233.8/233.8 kB</span> <span class="ansi-red-fg">317.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting tokenizers!=0.11.3,&lt;0.14,&gt;=0.11.1
+  Downloading tokenizers-0.13.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.6 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">7.6/7.6 MB</span> <span class="ansi-red-fg">145.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Requirement already satisfied: s3transfer&lt;0.7.0,&gt;=0.6.0 in /usr/local/lib/python3.8/site-packages (from boto3-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (0.6.0)
+Requirement already satisfied: jmespath&lt;2.0.0,&gt;=0.7.1 in /usr/local/lib/python3.8/site-packages (from boto3-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (1.0.1)
+Requirement already satisfied: botocore&lt;1.30.0,&gt;=1.29.24 in /usr/local/lib/python3.8/site-packages (from boto3-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (1.29.24)
+Collecting fonttools&gt;=4.22.0
+  Downloading fonttools-4.38.0-py3-none-any.whl (965 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">965.4/965.4 kB</span> <span class="ansi-red-fg">205.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting contourpy&gt;=1.0.1
+  Downloading contourpy-1.0.6-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (295 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">296.0/296.0 kB</span> <span class="ansi-red-fg">315.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: pyparsing&gt;=2.2.1 in /usr/local/lib/python3.8/site-packages (from matplotlib-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (3.0.9)
+Collecting cycler&gt;=0.10
+  Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Collecting kiwisolver&gt;=1.0.1
+  Downloading kiwisolver-1.4.4-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.2 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.2/1.2 MB</span> <span class="ansi-red-fg">331.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting pyarrow&gt;=6.0.0
+  Downloading pyarrow-10.0.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (36.0 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">36.0/36.0 MB</span> <span class="ansi-red-fg">234.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting aiohttp
+  Downloading aiohttp-3.8.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.0/1.0 MB</span> <span class="ansi-red-fg">261.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting wrapt&lt;2,&gt;=1.10
+  Downloading wrapt-1.14.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (81 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">81.0/81.0 kB</span> <span class="ansi-red-fg">250.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting zipp&gt;=3.1.0
+  Downloading zipp-3.11.0-py3-none-any.whl (6.6 kB)
+Collecting importlib-metadata
+  Downloading importlib_metadata-5.2.0-py3-none-any.whl (21 kB)
+Collecting llvmlite&lt;0.40,&gt;=0.39.0dev0
+  Downloading llvmlite-0.39.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.6 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">34.6/34.6 MB</span> <span class="ansi-red-fg">224.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting locket
+  Downloading locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
+Collecting spacy-loggers&lt;2.0.0,&gt;=1.0.0
+  Downloading spacy_loggers-1.0.4-py3-none-any.whl (11 kB)
+Collecting thinc&lt;8.2.0,&gt;=8.1.0
+  Downloading thinc-8.1.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (819 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">819.8/819.8 kB</span> <span class="ansi-red-fg">334.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting preshed&lt;3.1.0,&gt;=3.0.2
+  Downloading preshed-3.0.8-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">130.8/130.8 kB</span> <span class="ansi-red-fg">285.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting typer&lt;0.8.0,&gt;=0.3.0
+  Downloading typer-0.7.0-py3-none-any.whl (38 kB)
+Collecting cymem&lt;2.1.0,&gt;=2.0.2
+  Downloading cymem-2.0.7-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (36 kB)
+Collecting catalogue&lt;2.1.0,&gt;=2.0.6
+  Downloading catalogue-2.0.8-py3-none-any.whl (17 kB)
+Collecting murmurhash&lt;1.1.0,&gt;=0.28.0
+  Downloading murmurhash-1.0.9-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (21 kB)
+Collecting srsly&lt;3.0.0,&gt;=2.4.3
+  Downloading srsly-2.4.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (492 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">492.6/492.6 kB</span> <span class="ansi-red-fg">327.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting wasabi&lt;1.1.0,&gt;=0.9.1
+  Downloading wasabi-0.10.1-py3-none-any.whl (26 kB)
+Collecting langcodes&lt;4.0.0,&gt;=3.2.0
+  Downloading langcodes-3.3.0-py3-none-any.whl (181 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">181.6/181.6 kB</span> <span class="ansi-red-fg">303.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting spacy-legacy&lt;3.1.0,&gt;=3.0.10
+  Downloading spacy_legacy-3.0.10-py2.py3-none-any.whl (21 kB)
+Collecting pathy&gt;=0.3.5
+  Downloading pathy-0.10.1-py3-none-any.whl (48 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">48.9/48.9 kB</span> <span class="ansi-red-fg">131.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting tensorboard-plugin-wit&gt;=1.6.0
+  Downloading tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">781.3/781.3 kB</span> <span class="ansi-red-fg">196.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting google-auth&lt;3,&gt;=1.6.3
+  Downloading google_auth-2.15.0-py2.py3-none-any.whl (177 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">177.0/177.0 kB</span> <span class="ansi-red-fg">266.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting werkzeug&gt;=1.0.1
+  Downloading Werkzeug-2.2.2-py3-none-any.whl (232 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">232.7/232.7 kB</span> <span class="ansi-red-fg">292.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting absl-py&gt;=0.4
+  Downloading absl_py-1.3.0-py3-none-any.whl (124 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">124.6/124.6 kB</span> <span class="ansi-red-fg">294.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting markdown&gt;=2.6.8
+  Downloading Markdown-3.4.1-py3-none-any.whl (93 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">93.3/93.3 kB</span> <span class="ansi-red-fg">265.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting tensorboard-data-server&lt;0.7.0,&gt;=0.6.0
+  Downloading tensorboard_data_server-0.6.1-py3-none-manylinux2010_x86_64.whl (4.9 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">4.9/4.9 MB</span> <span class="ansi-red-fg">248.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting google-auth-oauthlib&lt;0.5,&gt;=0.4.1
+  Downloading google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
+Collecting protobuf&lt;4.0.0,&gt;=3.15.3
+  Downloading protobuf-3.20.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.0 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.0/1.0 MB</span> <span class="ansi-red-fg">338.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting heapdict
+  Downloading HeapDict-1.0.1-py3-none-any.whl (3.9 kB)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.8/site-packages (from jinja2-&gt;distributed&lt;=2021.11.2,&gt;=2021.09.1-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (2.1.1)
+Collecting ordered-set
+  Downloading ordered_set-4.1.0-py3-none-any.whl (7.6 kB)
+Collecting tenacity&gt;=6.2.0
+  Downloading tenacity-8.1.0-py3-none-any.whl (23 kB)
+Requirement already satisfied: pygments&lt;3.0.0,&gt;=2.6.0 in /usr/local/lib/python3.8/site-packages (from rich-&gt;openmim&lt;=0.2.1,&gt;0.1.5-&gt;autogluon.multimodal==0.6.1-&gt;autogluon) (2.13.0)
+Collecting commonmark&lt;0.10.0,&gt;=0.9.0
+  Downloading commonmark-0.9.1-py2.py3-none-any.whl (51 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">51.1/51.1 kB</span> <span class="ansi-red-fg">228.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: platformdirs&lt;3,&gt;=2.4 in /usr/local/lib/python3.8/site-packages (from virtualenv-&gt;ray&lt;2.1,&gt;=2.0-&gt;autogluon.core[all]==0.6.1-&gt;autogluon) (2.6.0)
+Collecting distlib&lt;1,&gt;=0.3.6
+  Downloading distlib-0.3.6-py2.py3-none-any.whl (468 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">468.5/468.5 kB</span> <span class="ansi-red-fg">337.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting yarl&lt;2.0,&gt;=1.0
+  Downloading yarl-1.8.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (262 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">262.1/262.1 kB</span> <span class="ansi-red-fg">305.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting multidict&lt;7.0,&gt;=4.5
+  Downloading multidict-6.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (121 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">121.3/121.3 kB</span> <span class="ansi-red-fg">275.8 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting async-timeout&lt;5.0,&gt;=4.0.0a3
+  Downloading async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
+Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in /usr/local/lib/python3.8/site-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.1-&gt;autogluon) (4.7.2)
+Collecting cachetools&lt;6.0,&gt;=2.0.0
+  Downloading cachetools-5.2.0-py3-none-any.whl (9.3 kB)
+Collecting pyasn1-modules&gt;=0.2.1
+  Downloading pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">155.3/155.3 kB</span> <span class="ansi-red-fg">310.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting requests-oauthlib&gt;=0.7.0
+  Downloading requests_oauthlib-1.3.1-py2.py3-none-any.whl (23 kB)
+Collecting blis&lt;0.8.0,&gt;=0.7.8
+  Downloading blis-0.7.9-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.2 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">10.2/10.2 MB</span> <span class="ansi-red-fg">211.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>a <span class="ansi-cyan-fg">0:00:01</span>
+Collecting confection&lt;1.0.0,&gt;=0.0.1
+  Downloading confection-0.0.3-py3-none-any.whl (32 kB)
+Requirement already satisfied: pyasn1&lt;0.5.0,&gt;=0.4.6 in /usr/local/lib/python3.8/site-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&gt;=2.9.1-&gt;pytorch-lightning&lt;1.8.0,&gt;=1.7.4-&gt;autogluon.multimodal==0.6.1-&gt;autogluon) (0.4.8)
+Collecting oauthlib&gt;=3.0.0
+  Downloading oauthlib-3.2.2-py3-none-any.whl (151 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">151.7/151.7 kB</span> <span class="ansi-red-fg">293.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Building wheels for collected packages: fairscale, antlr4-python3-runtime, seqeval, future
+  Building wheel for fairscale (pyproject.toml) ... done
+  Created wheel for fairscale: filename=fairscale-0.4.6-py3-none-any.whl size=307224 sha256=37898a379225bb0b07ac35b40cb0f5df3c9b27b9898644d61167444f0e620d1a
+  Stored in directory: /tmp/pip-ephem-wheel-cache-1vhc4f30/wheels/60/e8/f1/4f2cc869823c35e834c6cee0552a0605c2bdc89f7da81f1a1d
+  Building wheel for antlr4-python3-runtime (setup.py) ... done
+  Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.8-py3-none-any.whl size=141211 sha256=2abfbe5d481df8a2c3e3d9e1e78108745fc61cd8c0d9e2c0e549df85a6a90b74
+  Stored in directory: /tmp/pip-ephem-wheel-cache-1vhc4f30/wheels/34/d7/fe/a833ceccaee881c6f8cd49985ee4285bf94c5cf2c66ea5db68
+  Building wheel for seqeval (setup.py) ... done
+  Created wheel for seqeval: filename=seqeval-1.2.2-py3-none-any.whl size=16164 sha256=cd3f5093e99ec6765ed882a4b2471bd191f69db8b15a56f47743af58c0aede5a
+  Stored in directory: /tmp/pip-ephem-wheel-cache-1vhc4f30/wheels/e3/30/9b/6b670dac34775f2b7cc4e9b172202e81fbb4f9cdb103c1ca66
+  Building wheel for future (setup.py) ... done
+  Created wheel for future: filename=future-0.18.2-py3-none-any.whl size=491059 sha256=0f9d8b327bec84235c7bbde7f28be078199fa105cc63b3bedc8064dcae8ae528
+  Stored in directory: /tmp/pip-ephem-wheel-cache-1vhc4f30/wheels/01/49/0c/4e0a697824c7bd6516afb22e1af9d51427ccd36c74b05a297e
+Successfully built fairscale antlr4-python3-runtime seqeval future
+Installing collected packages: wasabi, typish, tokenizers, text-unidecode, tensorboard-plugin-wit, sortedcontainers, sentencepiece, pytz, py4j, msgpack, heapdict, distlib, cymem, commonmark, antlr4-python3-runtime, zipp, zict, yacs, xxhash, wrapt, werkzeug, tqdm, torch, toolz, threadpoolctl, tensorboard-data-server, tenacity, tblib, tabulate, spacy-loggers, spacy-legacy, smart-open, rich, regex, pyrsistent, pyDeprecate, pydantic, pyasn1-modules, psutil, protobuf, portalocker, ordered-set, omegaconf, oauthlib, numpy, networkx, murmurhash, multidict, locket, llvmlite, langcodes, kiwisolver, joblib, grpcio, future, fsspec, frozenlist, fonttools, filelock, fastprogress, dill, defusedxml, Cython, cycler, cloudpickle, click, catalogue, cachetools, autocfg, attrs, async-timeout, absl-py, yarl, virtualenv, typer, torchvision, torchtext, torchmetrics, tifffile, tensorboardX, srsly, scipy, responses, requests-oauthlib, PyWavelets, pyarrow, preshed, plotly, patsy, partd, pandas, opencv-python-headless, opencv-python, nptyping, nltk, multiprocess, importlib-resources, importlib-metadata, imageio, huggingface-hub, google-auth, fastcore, fairscale, deprecated, contourpy, blis, aiosignal, accelerate, xgboost, transformers, timm, statsmodels, scikit-learn, scikit-image, pathy, numba, nlpaug, matplotlib, markdown, jsonschema, hyperopt, google-auth-oauthlib, gluonts, fastdownload, dask, confection, aiohttp, thinc, tensorboard, sktime, seqeval, ray, qudida, pytorch-metric-learning, pmdarima, model-index, lightgbm, gluoncv, distributed, catboost, tbats, spacy, pytorch-lightning, openmim, datasets, autogluon.common, albumentations, fastai, evaluate, autogluon.features, autogluon.core, autogluon.tabular, autogluon.multimodal, autogluon.vision, autogluon.timeseries, autogluon.text, autogluon
+  Attempting uninstall: psutil
+    Found existing installation: psutil 5.9.4
+    Uninstalling psutil-5.9.4:
+      Successfully uninstalled psutil-5.9.4
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.24.0
+    Uninstalling numpy-1.24.0:
+      Successfully uninstalled numpy-1.24.0
+  Attempting uninstall: click
+    Found existing installation: click 8.1.3
+    Uninstalling click-8.1.3:
+      Successfully uninstalled click-8.1.3
+Successfully installed Cython-0.29.32 PyWavelets-1.4.1 absl-py-1.3.0 accelerate-0.13.2 aiohttp-3.8.3 aiosignal-1.3.1 albumentations-1.1.0 antlr4-python3-runtime-4.8 async-timeout-4.0.2 attrs-22.1.0 autocfg-0.0.8 autogluon-0.6.1 autogluon.common-0.6.1 autogluon.core-0.6.1 autogluon.features-0.6.1 autogluon.multimodal-0.6.1 autogluon.tabular-0.6.1 autogluon.text-0.6.1 autogluon.timeseries-0.6.1 autogluon.vision-0.6.1 blis-0.7.9 cachetools-5.2.0 catalogue-2.0.8 catboost-1.1.1 click-8.0.4 cloudpickle-2.2.0 commonmark-0.9.1 confection-0.0.3 contourpy-1.0.6 cycler-0.11.0 cymem-2.0.7 dask-2021.11.2 datasets-2.8.0 defusedxml-0.7.1 deprecated-1.2.13 dill-0.3.6 distlib-0.3.6 distributed-2021.11.2 evaluate-0.3.0 fairscale-0.4.6 fastai-2.7.10 fastcore-1.5.27 fastdownload-0.0.7 fastprogress-1.0.3 filelock-3.8.2 fonttools-4.38.0 frozenlist-1.3.3 fsspec-2022.11.0 future-0.18.2 gluoncv-0.10.5.post0 gluonts-0.11.5 google-auth-2.15.0 google-auth-oauthlib-0.4.6 grpcio-1.43.0 heapdict-1.0.1 huggingface-hub-0.11.1 hyperopt-0.2.7 imageio-2.23.0 importlib-metadata-5.2.0 importlib-resources-5.10.1 joblib-1.2.0 jsonschema-4.8.0 kiwisolver-1.4.4 langcodes-3.3.0 lightgbm-3.3.3 llvmlite-0.39.1 locket-1.0.0 markdown-3.4.1 matplotlib-3.6.2 model-index-0.1.11 msgpack-1.0.4 multidict-6.0.3 multiprocess-0.70.14 murmurhash-1.0.9 networkx-2.8.8 nlpaug-1.1.10 nltk-3.8 nptyping-1.4.4 numba-0.56.4 numpy-1.22.4 oauthlib-3.2.2 omegaconf-2.1.2 opencv-python-4.6.0.66 opencv-python-headless-4.6.0.66 openmim-0.2.1 ordered-set-4.1.0 pandas-1.5.2 partd-1.3.0 pathy-0.10.1 patsy-0.5.3 plotly-5.11.0 pmdarima-1.8.5 portalocker-2.6.0 preshed-3.0.8 protobuf-3.20.1 psutil-5.8.0 py4j-0.10.9.7 pyDeprecate-0.3.2 pyarrow-10.0.1 pyasn1-modules-0.2.8 pydantic-1.10.2 pyrsistent-0.19.2 pytorch-lightning-1.7.7 pytorch-metric-learning-1.3.2 pytz-2022.7 qudida-0.0.4 ray-2.0.1 regex-2022.10.31 requests-oauthlib-1.3.1 responses-0.18.0 rich-12.6.0 scikit-image-0.19.3 scikit-learn-1.1.3 scipy-1.8.1 sentencepiece-0.1.97 seqeval-1.2.2 sktime-0.13.4 smart-open-5.2.1 sortedcontainers-2.4.0 spacy-3.4.4 spacy-legacy-3.0.10 spacy-loggers-1.0.4 srsly-2.4.5 statsmodels-0.13.5 tabulate-0.9.0 tbats-1.1.2 tblib-1.7.0 tenacity-8.1.0 tensorboard-2.11.0 tensorboard-data-server-0.6.1 tensorboard-plugin-wit-1.8.1 tensorboardX-2.5.1 text-unidecode-1.3 thinc-8.1.5 threadpoolctl-3.1.0 tifffile-2022.10.10 timm-0.6.12 tokenizers-0.13.2 toolz-0.12.0 torch-1.12.1 torchmetrics-0.8.2 torchtext-0.13.1 torchvision-0.13.1 tqdm-4.64.1 transformers-4.23.1 typer-0.7.0 typish-1.9.3 virtualenv-20.17.1 wasabi-0.10.1 werkzeug-2.2.2 wrapt-1.14.1 xgboost-1.7.2 xxhash-3.1.0 yacs-0.1.8 yarl-1.8.2 zict-2.2.0 zipp-3.11.0
 <span class="ansi-yellow-fg">WARNING: Running pip as the &#39;root&#39; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv</span><span class="ansi-yellow-fg">
 </span></pre>
 </div>
@@ -14898,12 +15250,12 @@ Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[102]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -14923,6 +15275,30 @@ Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>/usr/local/lib/python3.8/site-packages/tqdm/auto.py:22: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -15030,7 +15406,7 @@ Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[156]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load the data</span>
@@ -15049,7 +15425,7 @@ Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -15070,7 +15446,7 @@ Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
@@ -15199,7 +15575,7 @@ Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -15220,7 +15596,7 @@ Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -15331,7 +15707,7 @@ Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -15400,7 +15776,7 @@ memory usage: 1020.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -15466,7 +15842,7 @@ memory usage: 456.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -15487,7 +15863,7 @@ memory usage: 456.7+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
@@ -15652,7 +16028,7 @@ memory usage: 456.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="p">[[</span><span class="s1">'temp'</span><span class="p">,</span><span class="s1">'atemp'</span><span class="p">,</span><span class="s1">'humidity'</span><span class="p">,</span><span class="s1">'windspeed'</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -15673,7 +16049,7 @@ memory usage: 456.7+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
@@ -15759,7 +16135,7 @@ memory usage: 456.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -15780,7 +16156,7 @@ memory usage: 456.7+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
@@ -15925,874 +16301,6 @@ memory usage: 456.7+ KB
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Download the dataset, it will be in a .zip file so you'll need to unzip it as well.</span>
-<span class="o">!</span>kaggle competitions download -c bike-sharing-demand
-<span class="c1"># If you already downloaded it you can use the -o command to overwrite the file</span>
-<span class="o">!</span>unzip -o bike-sharing-demand.zip
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Downloading bike-sharing-demand.zip to /root/cd0385-project-starter/project
-  0%|                                                | 0.00/189k [00:00&lt;?, ?B/s]
-100%|████████████████████████████████████████| 189k/189k [00:00&lt;00:00, 8.97MB/s]
-Archive:  bike-sharing-demand.zip
-  inflating: sampleSubmission.csv    
-  inflating: test.csv                
-  inflating: train.csv               
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[117]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">autogluon.tabular</span> <span class="kn">import</span> <span class="n">TabularPredictor</span>
-
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="o">%</span><span class="k">matplotlib</span> inline
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create the train dataset in pandas by reading the csv</span>
-<span class="c1"># Set the parsing of the datetime column so you can use some of the `dt` features in pandas later</span>
-<span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'train.csv'</span><span class="p">)</span>
-<span class="n">train</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>datetime</th>
-      <th>season</th>
-      <th>holiday</th>
-      <th>workingday</th>
-      <th>weather</th>
-      <th>temp</th>
-      <th>atemp</th>
-      <th>humidity</th>
-      <th>windspeed</th>
-      <th>casual</th>
-      <th>registered</th>
-      <th>count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2011-01-01 00:00:00</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>9.84</td>
-      <td>14.395</td>
-      <td>81</td>
-      <td>0.0</td>
-      <td>3</td>
-      <td>13</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2011-01-01 01:00:00</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>9.02</td>
-      <td>13.635</td>
-      <td>80</td>
-      <td>0.0</td>
-      <td>8</td>
-      <td>32</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2011-01-01 02:00:00</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>9.02</td>
-      <td>13.635</td>
-      <td>80</td>
-      <td>0.0</td>
-      <td>5</td>
-      <td>27</td>
-      <td>32</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2011-01-01 03:00:00</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>9.84</td>
-      <td>14.395</td>
-      <td>75</td>
-      <td>0.0</td>
-      <td>3</td>
-      <td>10</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2011-01-01 04:00:00</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>9.84</td>
-      <td>14.395</td>
-      <td>75</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Simple output of the train dataset to view some of the min/max/varition of the dataset features.</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create the test pandas dataframe in pandas by reading the csv, remember to parse the datetime!</span>
-<span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'test.csv'</span><span class="p">)</span>
-<span class="n">test</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>datetime</th>
-      <th>season</th>
-      <th>holiday</th>
-      <th>workingday</th>
-      <th>weather</th>
-      <th>temp</th>
-      <th>atemp</th>
-      <th>humidity</th>
-      <th>windspeed</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2011-01-20 00:00:00</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>10.66</td>
-      <td>11.365</td>
-      <td>56</td>
-      <td>26.0027</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2011-01-20 01:00:00</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>10.66</td>
-      <td>13.635</td>
-      <td>56</td>
-      <td>0.0000</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2011-01-20 02:00:00</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>10.66</td>
-      <td>13.635</td>
-      <td>56</td>
-      <td>0.0000</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2011-01-20 03:00:00</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>10.66</td>
-      <td>12.880</td>
-      <td>56</td>
-      <td>11.0014</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2011-01-20 04:00:00</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>10.66</td>
-      <td>12.880</td>
-      <td>56</td>
-      <td>11.0014</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Same thing as train and test dataset</span>
-<span class="n">submission</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'sampleSubmission.csv'</span><span class="p">)</span>
-<span class="n">submission</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>datetime</th>
-      <th>count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2011-01-20 00:00:00</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2011-01-20 01:00:00</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2011-01-20 02:00:00</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2011-01-20 03:00:00</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2011-01-20 04:00:00</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 10886 entries, 0 to 10885
-Data columns (total 12 columns):
- #   Column      Non-Null Count  Dtype  
----  ------      --------------  -----  
- 0   datetime    10886 non-null  object 
- 1   season      10886 non-null  int64  
- 2   holiday     10886 non-null  int64  
- 3   workingday  10886 non-null  int64  
- 4   weather     10886 non-null  int64  
- 5   temp        10886 non-null  float64
- 6   atemp       10886 non-null  float64
- 7   humidity    10886 non-null  int64  
- 8   windspeed   10886 non-null  float64
- 9   casual      10886 non-null  int64  
- 10  registered  10886 non-null  int64  
- 11  count       10886 non-null  int64  
-dtypes: float64(3), int64(8), object(1)
-memory usage: 1020.7+ KB
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>season</th>
-      <th>holiday</th>
-      <th>workingday</th>
-      <th>weather</th>
-      <th>temp</th>
-      <th>atemp</th>
-      <th>humidity</th>
-      <th>windspeed</th>
-      <th>casual</th>
-      <th>registered</th>
-      <th>count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>10886.000000</td>
-      <td>10886.000000</td>
-      <td>10886.000000</td>
-      <td>10886.000000</td>
-      <td>10886.00000</td>
-      <td>10886.000000</td>
-      <td>10886.000000</td>
-      <td>10886.000000</td>
-      <td>10886.000000</td>
-      <td>10886.000000</td>
-      <td>10886.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>2.506614</td>
-      <td>0.028569</td>
-      <td>0.680875</td>
-      <td>1.418427</td>
-      <td>20.23086</td>
-      <td>23.655084</td>
-      <td>61.886460</td>
-      <td>12.799395</td>
-      <td>36.021955</td>
-      <td>155.552177</td>
-      <td>191.574132</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>1.116174</td>
-      <td>0.166599</td>
-      <td>0.466159</td>
-      <td>0.633839</td>
-      <td>7.79159</td>
-      <td>8.474601</td>
-      <td>19.245033</td>
-      <td>8.164537</td>
-      <td>49.960477</td>
-      <td>151.039033</td>
-      <td>181.144454</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>0.82000</td>
-      <td>0.760000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>2.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>13.94000</td>
-      <td>16.665000</td>
-      <td>47.000000</td>
-      <td>7.001500</td>
-      <td>4.000000</td>
-      <td>36.000000</td>
-      <td>42.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>3.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>20.50000</td>
-      <td>24.240000</td>
-      <td>62.000000</td>
-      <td>12.998000</td>
-      <td>17.000000</td>
-      <td>118.000000</td>
-      <td>145.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>4.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>2.000000</td>
-      <td>26.24000</td>
-      <td>31.060000</td>
-      <td>77.000000</td>
-      <td>16.997900</td>
-      <td>49.000000</td>
-      <td>222.000000</td>
-      <td>284.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>4.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>4.000000</td>
-      <td>41.00000</td>
-      <td>45.455000</td>
-      <td>100.000000</td>
-      <td>56.996900</td>
-      <td>367.000000</td>
-      <td>886.000000</td>
-      <td>977.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>season</th>
-      <th>holiday</th>
-      <th>workingday</th>
-      <th>weather</th>
-      <th>temp</th>
-      <th>atemp</th>
-      <th>humidity</th>
-      <th>windspeed</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>6493.000000</td>
-      <td>6493.000000</td>
-      <td>6493.000000</td>
-      <td>6493.000000</td>
-      <td>6493.000000</td>
-      <td>6493.000000</td>
-      <td>6493.000000</td>
-      <td>6493.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>2.493300</td>
-      <td>0.029108</td>
-      <td>0.685815</td>
-      <td>1.436778</td>
-      <td>20.620607</td>
-      <td>24.012865</td>
-      <td>64.125212</td>
-      <td>12.631157</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>1.091258</td>
-      <td>0.168123</td>
-      <td>0.464226</td>
-      <td>0.648390</td>
-      <td>8.059583</td>
-      <td>8.782741</td>
-      <td>19.293391</td>
-      <td>8.250151</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>0.820000</td>
-      <td>0.000000</td>
-      <td>16.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>2.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>13.940000</td>
-      <td>16.665000</td>
-      <td>49.000000</td>
-      <td>7.001500</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>3.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>21.320000</td>
-      <td>25.000000</td>
-      <td>65.000000</td>
-      <td>11.001400</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>3.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>2.000000</td>
-      <td>27.060000</td>
-      <td>31.060000</td>
-      <td>81.000000</td>
-      <td>16.997900</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>4.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>4.000000</td>
-      <td>40.180000</td>
-      <td>50.000000</td>
-      <td>100.000000</td>
-      <td>55.998600</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -17446,7 +16954,7 @@ submission.csv               2022-12-12 18:27:29  first raw submission  complete
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hist</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -17492,7 +17000,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hist</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
@@ -17550,7 +17058,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[157]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create datetime variables</span>
@@ -17574,7 +17082,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[158]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">dateVar</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
@@ -17615,7 +17123,7 @@ Datetime vars created
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[159]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'weekday'</span><span class="p">,</span> <span class="s1">'hour'</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">'registered'</span><span class="p">:</span><span class="s1">'mean'</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s1">'hour'</span><span class="p">,</span><span class="s1">'weekday'</span><span class="p">,</span><span class="s1">'registered'</span><span class="p">)</span>\
@@ -17642,7 +17150,7 @@ Datetime vars created
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/tmp/ipykernel_12225/2319798037.py:1: FutureWarning: In a future version of pandas all arguments of DataFrame.pivot will be keyword-only.
+<pre>/tmp/ipykernel_16/2319798037.py:1: FutureWarning: In a future version of pandas all arguments of DataFrame.pivot will be keyword-only.
   train.groupby([&#39;weekday&#39;, &#39;hour&#39;]).agg({&#39;registered&#39;:&#39;mean&#39;}).reset_index().pivot(&#39;hour&#39;,&#39;weekday&#39;,&#39;registered&#39;)\
 </pre>
 </div>
@@ -17651,7 +17159,7 @@ Datetime vars created
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[159]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
@@ -17701,7 +17209,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[160]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'weekday'</span><span class="p">,</span> <span class="s1">'hour'</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">'casual'</span><span class="p">:</span><span class="s1">'mean'</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s1">'hour'</span><span class="p">,</span><span class="s1">'weekday'</span><span class="p">,</span><span class="s1">'casual'</span><span class="p">)</span>\
@@ -17728,7 +17236,7 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/tmp/ipykernel_12225/618468075.py:1: FutureWarning: In a future version of pandas all arguments of DataFrame.pivot will be keyword-only.
+<pre>/tmp/ipykernel_16/618468075.py:1: FutureWarning: In a future version of pandas all arguments of DataFrame.pivot will be keyword-only.
   train.groupby([&#39;weekday&#39;, &#39;hour&#39;]).agg({&#39;casual&#39;:&#39;mean&#39;}).reset_index().pivot(&#39;hour&#39;,&#39;weekday&#39;,&#39;casual&#39;)\
 </pre>
 </div>
@@ -17737,7 +17245,7 @@ class="
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[160]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
 
 
@@ -17787,7 +17295,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[161]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># add the mean of registered and casual users to the test data</span>
@@ -17811,7 +17319,7 @@ class="
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[161]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
 
 
@@ -17946,7 +17454,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[162]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert datatypes</span>
@@ -17969,7 +17477,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[163]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">=</span><span class="n">varAstype</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
@@ -18010,7 +17518,7 @@ The categorical columns are converted
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[129]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># View the new features</span>
@@ -18032,7 +17540,7 @@ The categorical columns are converted
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[129]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
 
 
 
@@ -18173,7 +17681,7 @@ The categorical columns are converted
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[164]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># scaled the numerical variables</span>
@@ -19465,7 +18973,7 @@ submission_new_hpo1.csv      2022-12-14 01:15:26  new features hpo1     complete
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[221]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
@@ -19526,7 +19034,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[233]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="p">[</span><span class="s1">'weekday'</span><span class="p">]</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s1">'weekday'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'category'</span><span class="p">)</span>
@@ -19543,7 +19051,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[260]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">typeVar</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
@@ -19567,7 +19075,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[261]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">typeVar</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
@@ -19584,7 +19092,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[250]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'datetime'</span><span class="p">)[</span><span class="s1">'count'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="n">title</span><span class="o">=</span><span class="s1">'Demand by date'</span><span class="p">)</span>
@@ -19630,7 +19138,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[245]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create datetime variables</span>
@@ -19655,7 +19163,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[295]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">dateVar2</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
@@ -19696,7 +19204,7 @@ Datetime vars created
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[296]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -19717,7 +19225,7 @@ Datetime vars created
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[296]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
 
 
 
@@ -19753,10 +19261,10 @@ Datetime vars created
       <th>hour</th>
       <th>casual</th>
       <th>registered</th>
+      <th>type_hour</th>
       <th>year</th>
       <th>month</th>
       <th>day</th>
-      <th>type_hour</th>
     </tr>
   </thead>
   <tbody>
@@ -19775,10 +19283,10 @@ Datetime vars created
       <td>0</td>
       <td>6.246154</td>
       <td>31.230769</td>
+      <td>3</td>
       <td>2011</td>
       <td>1</td>
       <td>20</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>1</th>
@@ -19795,10 +19303,10 @@ Datetime vars created
       <td>1</td>
       <td>2.984615</td>
       <td>12.430769</td>
+      <td>3</td>
       <td>2011</td>
       <td>1</td>
       <td>20</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>2</th>
@@ -19815,10 +19323,10 @@ Datetime vars created
       <td>2</td>
       <td>1.906250</td>
       <td>6.515625</td>
+      <td>3</td>
       <td>2011</td>
       <td>1</td>
       <td>20</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>3</th>
@@ -19835,10 +19343,10 @@ Datetime vars created
       <td>3</td>
       <td>0.786885</td>
       <td>4.081967</td>
+      <td>3</td>
       <td>2011</td>
       <td>1</td>
       <td>20</td>
-      <td>3</td>
     </tr>
     <tr>
       <th>4</th>
@@ -19855,10 +19363,10 @@ Datetime vars created
       <td>4</td>
       <td>0.650794</td>
       <td>4.650794</td>
+      <td>3</td>
       <td>2011</td>
       <td>1</td>
       <td>20</td>
-      <td>3</td>
     </tr>
   </tbody>
 </table>
@@ -19876,7 +19384,7 @@ Datetime vars created
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[297]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># add the mean of registered and casual users to the test data</span>
@@ -19904,7 +19412,7 @@ Datetime vars created
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[297]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
 
 
 
@@ -19940,10 +19448,10 @@ Datetime vars created
       <th>hour</th>
       <th>casual</th>
       <th>registered</th>
+      <th>type_hour</th>
       <th>year</th>
       <th>month</th>
       <th>day</th>
-      <th>type_hour</th>
       <th>count_mean</th>
     </tr>
   </thead>
@@ -19963,10 +19471,10 @@ Datetime vars created
       <td>0</td>
       <td>6.246154</td>
       <td>31.230769</td>
+      <td>3</td>
       <td>2011</td>
       <td>1</td>
       <td>20</td>
-      <td>3</td>
       <td>10.2</td>
     </tr>
     <tr>
@@ -19984,10 +19492,10 @@ Datetime vars created
       <td>1</td>
       <td>2.984615</td>
       <td>12.430769</td>
+      <td>3</td>
       <td>2011</td>
       <td>1</td>
       <td>20</td>
-      <td>3</td>
       <td>3.8</td>
     </tr>
     <tr>
@@ -20005,10 +19513,10 @@ Datetime vars created
       <td>2</td>
       <td>1.906250</td>
       <td>6.515625</td>
+      <td>3</td>
       <td>2011</td>
       <td>1</td>
       <td>20</td>
-      <td>3</td>
       <td>2.6</td>
     </tr>
     <tr>
@@ -20026,10 +19534,10 @@ Datetime vars created
       <td>3</td>
       <td>0.786885</td>
       <td>4.081967</td>
+      <td>3</td>
       <td>2011</td>
       <td>1</td>
       <td>20</td>
-      <td>3</td>
       <td>3.5</td>
     </tr>
     <tr>
@@ -20047,10 +19555,10 @@ Datetime vars created
       <td>4</td>
       <td>0.650794</td>
       <td>4.650794</td>
+      <td>3</td>
       <td>2011</td>
       <td>1</td>
       <td>20</td>
-      <td>3</td>
       <td>2.6</td>
     </tr>
   </tbody>
@@ -20069,7 +19577,7 @@ Datetime vars created
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[299]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># scale the numerical columns</span>
@@ -20089,55 +19597,13 @@ Datetime vars created
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[300]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_train</span><span class="p">,</span> <span class="n">df_val</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Train size: "</span><span class="p">,</span> <span class="n">df_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Validation size: "</span><span class="p">,</span> <span class="n">df_val</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Train size:  (8708, 19)
-Validation size:  (2178, 19)
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">predictor_new_hpo2</span> <span class="o">=</span> <span class="n">TabularPredictor</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">'count'</span><span class="p">,</span> 
                                           <span class="n">problem_type</span><span class="o">=</span><span class="s1">'regression'</span><span class="p">,</span>
                                           <span class="n">eval_metric</span><span class="o">=</span><span class="s1">'root_mean_squared_error'</span><span class="p">)</span>\
-<span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_train</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'datetime'</span><span class="p">,</span><span class="s1">'temp'</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> 
+<span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'datetime'</span><span class="p">,</span><span class="s1">'temp'</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> 
      <span class="n">time_limit</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> 
      <span class="n">presets</span><span class="o">=</span><span class="s1">'best_quality'</span><span class="p">,</span>
      <span class="n">num_bag_folds</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
@@ -20164,24 +19630,24 @@ Validation size:  (2178, 19)
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>No path specified. Models will be saved in: &#34;AutogluonModels/ag-20221214_020802/&#34;
+<pre>No path specified. Models will be saved in: &#34;AutogluonModels/ag-20221219_185159/&#34;
 Presets specified: [&#39;best_quality&#39;]
 Stack configuration (auto_stack=True): num_stack_levels=1, num_bag_folds=2, num_bag_sets=2
 Beginning AutoGluon training ... Time limit = 900s
-AutoGluon will save models to &#34;AutogluonModels/ag-20221214_020802/&#34;
-AutoGluon Version:  0.6.0
+AutoGluon will save models to &#34;AutogluonModels/ag-20221219_185159/&#34;
+AutoGluon Version:  0.6.1
 Python Version:     3.8.12
 Operating System:   Linux
 Platform Machine:   x86_64
-Platform Version:   #1 SMP Thu Sep 29 01:01:23 UTC 2022
+Platform Version:   #1 SMP Wed Oct 26 20:36:53 UTC 2022
 Train Data Rows:    8708
 Train Data Columns: 16
 Label Column: count
 Preprocessing data ...
 Using Feature Generators to preprocess the data ...
 Fitting AutoMLPipelineFeatureGenerator...
-	Available Memory:                    1392.35 MB
-	Train Data (Original)  Memory Usage: 0.75 MB (0.1% of available memory)
+	Available Memory:                    2125.18 MB
+	Train Data (Original)  Memory Usage: 0.75 MB (0.0% of available memory)
 	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
 	Stage 1 Generators:
 		Fitting AsTypeFeatureGenerator...
@@ -20197,45 +19663,123 @@ Fitting AutoMLPipelineFeatureGenerator...
 	Types of features in original data (raw dtype, special dtypes):
 		(&#39;category&#39;, []) : 6 | [&#39;season&#39;, &#39;holiday&#39;, &#39;workingday&#39;, &#39;weather&#39;, &#39;weekday&#39;, ...]
 		(&#39;float&#39;, [])    : 6 | [&#39;atemp&#39;, &#39;humidity&#39;, &#39;windspeed&#39;, &#39;casual&#39;, &#39;registered&#39;, ...]
-		(&#39;int&#39;, [])      : 4 | [&#39;hour&#39;, &#39;day&#39;, &#39;year&#39;, &#39;month&#39;]
+		(&#39;int&#39;, [])      : 4 | [&#39;hour&#39;, &#39;year&#39;, &#39;month&#39;, &#39;day&#39;]
 	Types of features in processed data (raw dtype, special dtypes):
 		(&#39;category&#39;, [])  : 4 | [&#39;season&#39;, &#39;weather&#39;, &#39;weekday&#39;, &#39;type_hour&#39;]
 		(&#39;float&#39;, [])     : 6 | [&#39;atemp&#39;, &#39;humidity&#39;, &#39;windspeed&#39;, &#39;casual&#39;, &#39;registered&#39;, ...]
-		(&#39;int&#39;, [])       : 3 | [&#39;hour&#39;, &#39;day&#39;, &#39;month&#39;]
+		(&#39;int&#39;, [])       : 3 | [&#39;hour&#39;, &#39;month&#39;, &#39;day&#39;]
 		(&#39;int&#39;, [&#39;bool&#39;]) : 3 | [&#39;holiday&#39;, &#39;workingday&#39;, &#39;year&#39;]
-	0.2s = Fit runtime
+	0.1s = Fit runtime
 	16 features in original data used to generate 16 features in processed data.
 	Train Data (Processed) Memory Usage: 0.69 MB (0.0% of available memory)
-Data preprocessing and feature engineering runtime = 0.21s ...
+Data preprocessing and feature engineering runtime = 0.15s ...
 AutoGluon will gauge predictive performance using evaluation metric: &#39;root_mean_squared_error&#39;
 	This metric&#39;s sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
 	To change this, specify the eval_metric parameter of Predictor()
 AutoGluon will fit 2 stack levels (L1 to L2) ...
 Fitting 11 L1 models ...
-Fitting model: KNeighborsUnif_BAG_L1 ... Training model for up to 599.71s of the 899.79s of remaining time.
-	-0.359	 = Validation score   (-root_mean_squared_error)
-	0.02s	 = Training   runtime
-	0.11s	 = Validation runtime
-Fitting model: KNeighborsDist_BAG_L1 ... Training model for up to 599.46s of the 899.53s of remaining time.
-	-0.3449	 = Validation score   (-root_mean_squared_error)
+Fitting model: KNeighborsUnif_BAG_L1 ... Training model for up to 599.75s of the 899.84s of remaining time.
+	-65.022	 = Validation score   (-root_mean_squared_error)
+	0.03s	 = Training   runtime
+	0.1s	 = Validation runtime
+Fitting model: KNeighborsDist_BAG_L1 ... Training model for up to 599.5s of the 899.59s of remaining time.
+	-62.4737	 = Validation score   (-root_mean_squared_error)
 	0.02s	 = Training   runtime
 	0.14s	 = Validation runtime
-Fitting model: LightGBMXT_BAG_L1 ... Training model for up to 599.18s of the 899.25s of remaining time.
+Fitting model: LightGBMXT_BAG_L1 ... Training model for up to 599.21s of the 899.31s of remaining time.
 	Fitting 2 child models (S1F1 - S1F2) | Fitting with ParallelLocalFoldFittingStrategy
-	-0.0395	 = Validation score   (-root_mean_squared_error)
-	21.92s	 = Training   runtime
-	12.76s	 = Validation runtime
-Fitting model: LightGBM_BAG_L1 ... Training model for up to 563.44s of the 863.52s of remaining time.
+	-7.5982	 = Validation score   (-root_mean_squared_error)
+	30.06s	 = Training   runtime
+	21.96s	 = Validation runtime
+Fitting model: LightGBM_BAG_L1 ... Training model for up to 532.48s of the 832.57s of remaining time.
 	Fitting 2 child models (S1F1 - S1F2) | Fitting with ParallelLocalFoldFittingStrategy
-	-0.0304	 = Validation score   (-root_mean_squared_error)
-	2.48s	 = Training   runtime
-	0.22s	 = Validation runtime
-Fitting model: RandomForestMSE_BAG_L1 ... Training model for up to 556.35s of the 856.42s of remaining time.
-	-0.0178	 = Validation score   (-root_mean_squared_error)
-	9.29s	 = Training   runtime
+	-5.5138	 = Validation score   (-root_mean_squared_error)
+	2.57s	 = Training   runtime
+	0.21s	 = Validation runtime
+Fitting model: RandomForestMSE_BAG_L1 ... Training model for up to 526.31s of the 826.41s of remaining time.
+	-3.2179	 = Validation score   (-root_mean_squared_error)
+	9.83s	 = Training   runtime
+	0.48s	 = Validation runtime
+Fitting model: CatBoost_BAG_L1 ... Training model for up to 514.91s of the 815.01s of remaining time.
+	Fitting 2 child models (S1F1 - S1F2) | Fitting with ParallelLocalFoldFittingStrategy
+	-3.8507	 = Validation score   (-root_mean_squared_error)
+	270.95s	 = Training   runtime
+	0.19s	 = Validation runtime
+Fitting model: ExtraTreesMSE_BAG_L1 ... Training model for up to 240.3s of the 540.4s of remaining time.
+	-3.789	 = Validation score   (-root_mean_squared_error)
+	4.87s	 = Training   runtime
+	0.51s	 = Validation runtime
+Fitting model: NeuralNetFastAI_BAG_L1 ... Training model for up to 233.49s of the 533.59s of remaining time.
+	Fitting 2 child models (S1F1 - S1F2) | Fitting with ParallelLocalFoldFittingStrategy
+E1219 18:58:06.594034825     400 chttp2_transport.cc:1103]   Received a GOAWAY with error code ENHANCE_YOUR_CALM and debug data equal to &#34;too_many_pings&#34;
+	-4.4322	 = Validation score   (-root_mean_squared_error)
+	15.58s	 = Training   runtime
+	0.32s	 = Validation runtime
+Fitting model: XGBoost_BAG_L1 ... Training model for up to 213.17s of the 513.26s of remaining time.
+	Fitting 2 child models (S1F1 - S1F2) | Fitting with ParallelLocalFoldFittingStrategy
+	-4.9765	 = Validation score   (-root_mean_squared_error)
+	58.17s	 = Training   runtime
+	1.54s	 = Validation runtime
+Fitting model: NeuralNetTorch_BAG_L1 ... Training model for up to 149.73s of the 449.83s of remaining time.
+	Fitting 2 child models (S1F1 - S1F2) | Fitting with ParallelLocalFoldFittingStrategy
+	-8.6841	 = Validation score   (-root_mean_squared_error)
+	33.91s	 = Training   runtime
+	0.12s	 = Validation runtime
+Fitting model: LightGBMLarge_BAG_L1 ... Training model for up to 112.22s of the 412.31s of remaining time.
+	Fitting 2 child models (S1F1 - S1F2) | Fitting with ParallelLocalFoldFittingStrategy
+	-7.1185	 = Validation score   (-root_mean_squared_error)
+	54.37s	 = Training   runtime
+	30.48s	 = Validation runtime
+Completed 1/2 k-fold bagging repeats ...
+Fitting model: WeightedEnsemble_L2 ... Training model for up to 360.0s of the 320.99s of remaining time.
+	-2.3436	 = Validation score   (-root_mean_squared_error)
+	0.64s	 = Training   runtime
+	0.0s	 = Validation runtime
+Fitting 9 L2 models ...
+Fitting model: LightGBMXT_BAG_L2 ... Training model for up to 320.27s of the 320.25s of remaining time.
+	Fitting 2 child models (S1F1 - S1F2) | Fitting with ParallelLocalFoldFittingStrategy
+	-5.0241	 = Validation score   (-root_mean_squared_error)
+	6.86s	 = Training   runtime
+	2.06s	 = Validation runtime
+Fitting model: LightGBM_BAG_L2 ... Training model for up to 308.3s of the 308.27s of remaining time.
+	Fitting 2 child models (S1F1 - S1F2) | Fitting with ParallelLocalFoldFittingStrategy
+	-3.3167	 = Validation score   (-root_mean_squared_error)
+	2.88s	 = Training   runtime
+	0.1s	 = Validation runtime
+Fitting model: RandomForestMSE_BAG_L2 ... Training model for up to 301.48s of the 301.46s of remaining time.
+	-1.8946	 = Validation score   (-root_mean_squared_error)
+	19.31s	 = Training   runtime
+	0.39s	 = Validation runtime
+Fitting model: CatBoost_BAG_L2 ... Training model for up to 281.39s of the 281.36s of remaining time.
+	Fitting 2 child models (S1F1 - S1F2) | Fitting with ParallelLocalFoldFittingStrategy
+	-3.6268	 = Validation score   (-root_mean_squared_error)
+	225.31s	 = Training   runtime
+	0.17s	 = Validation runtime
+Fitting model: ExtraTreesMSE_BAG_L2 ... Training model for up to 52.42s of the 52.4s of remaining time.
+	-1.8948	 = Validation score   (-root_mean_squared_error)
+	5.96s	 = Training   runtime
 	0.52s	 = Validation runtime
-Fitting model: CatBoost_BAG_L1 ... Training model for up to 545.39s of the 845.47s of remaining time.
+Fitting model: NeuralNetFastAI_BAG_L2 ... Training model for up to 45.22s of the 45.2s of remaining time.
 	Fitting 2 child models (S1F1 - S1F2) | Fitting with ParallelLocalFoldFittingStrategy
+	-3.4049	 = Validation score   (-root_mean_squared_error)
+	16.03s	 = Training   runtime
+	0.25s	 = Validation runtime
+Fitting model: XGBoost_BAG_L2 ... Training model for up to 25.53s of the 25.51s of remaining time.
+	Fitting 2 child models (S1F1 - S1F2) | Fitting with ParallelLocalFoldFittingStrategy
+	-3.3855	 = Validation score   (-root_mean_squared_error)
+	20.48s	 = Training   runtime
+	0.18s	 = Validation runtime
+Fitting model: NeuralNetTorch_BAG_L2 ... Training model for up to 0.72s of the 0.69s of remaining time.
+	Fitting 2 child models (S1F1 - S1F2) | Fitting with ParallelLocalFoldFittingStrategy
+	Time limit exceeded... Skipping NeuralNetTorch_BAG_L2.
+2022-12-19 19:07:04,460	ERROR worker.py:399 -- Unhandled error (suppress with &#39;RAY_IGNORE_UNHANDLED_ERRORS=1&#39;): The worker died unexpectedly while executing this task. Check python-core-worker-*.log files for more information.
+Completed 1/2 k-fold bagging repeats ...
+Fitting model: WeightedEnsemble_L3 ... Training model for up to 360.0s of the -4.36s of remaining time.
+	-1.8218	 = Validation score   (-root_mean_squared_error)
+	0.37s	 = Training   runtime
+	0.0s	 = Validation runtime
+AutoGluon training complete, total runtime = 904.93s ... Best model: &#34;WeightedEnsemble_L3&#34;
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load(&#34;AutogluonModels/ag-20221219_185159/&#34;)
 </pre>
 </div>
 </div>
@@ -20533,7 +20077,7 @@ submission_new_features.csv  2022-12-14 01:30:36  new features          complete
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">predictor_new_hpo3</span> <span class="o">=</span> <span class="n">TabularPredictor</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">'count'</span><span class="p">,</span> 
                                           <span class="n">problem_type</span><span class="o">=</span><span class="s1">'regression'</span><span class="p">,</span>
                                           <span class="n">eval_metric</span><span class="o">=</span><span class="s1">'root_mean_squared_error'</span><span class="p">)</span>\
-<span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_train</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'datetime'</span><span class="p">,</span><span class="s1">'temp'</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> 
+<span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'datetime'</span><span class="p">,</span><span class="s1">'temp'</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> 
      <span class="n">time_limit</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> 
      <span class="n">presets</span><span class="o">=</span><span class="s1">'best_quality'</span><span class="p">,</span>
      <span class="n">num_bag_folds</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
@@ -20962,7 +20506,7 @@ submission_new_hpo1.csv      2022-12-14 01:48:07  new features hpo1     complete
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Appendix:">Appendix:<a class="anchor-link" href="#Appendix:">&#182;</a></h2>
+<h2 id="Appendix">Appendix<a class="anchor-link" href="#Appendix">&#182;</a></h2>
 </div>
 </div>
 </div>
