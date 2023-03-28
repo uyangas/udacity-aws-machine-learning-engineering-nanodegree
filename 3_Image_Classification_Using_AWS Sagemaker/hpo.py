@@ -5,146 +5,247 @@ import torch.optim as optim
 import torchvision
 import torchvision.models as models
 import torchvision.transforms as transforms
+import torch.nn.functional as F
 from torchvision.datasets import ImageFolder
 
 import argparse
-import os
 from PIL import Image, ImageFile
+import os
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True #disable image truncated error
 
 
-def test(model, test_loader, criterion, device):
+def logging(loss, running_corrects, running_samples, total_samples):
+    accuracy = running_corrects/running_samples
+    print("Images [{}/{} ({:.0f}%)] Loss: {:.2f} Accuracy: {}/{} ({:.2f}%)".format(
+            running_samples,
+            total_samples,
+            100.0 * (running_samples / total_samples),
+            loss.item(),
+            running_corrects,
+            running_samples,
+            100.0*accuracy,
+        )
+    )
+
     
+def test(model, test_loader, criterion, device):
     '''
-    Tests the model on testing data
+    Function that tests the model
     
     Args:
-        - model: Pytorch model
-        - test_loader: DataLoader object of the test data
-        - criterion: Loss function
-        - device: cpu/gpu
+        - model:
+        - test_loader: data_loader of test dataset
+        - criterion: loss function
+        - device: CPU/ GPU
+        
+    '''
+    
+    model.eval() 
+    
+    running_loss = 0.0
+    running_corrects = 0
+    running_samples = 0
+    total_samples = len(test_loader.dataset)
+    
+    with torch.no_grad():
+        for inputs, labels in test_loader:
+            
+            inputs = inputs.to(device)
+            labels = labels.to(device)
+            
+            output = model(inputs)
+            loss = criterion(output, labels)
+            
+            running_loss += loss.item()*inputs.size(0)  # sum up batch loss
+            pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
+            running_corrects += pred.eq(labels.view_as(pred)).sum().item()
+            running_samples += len(inputs)
+
+            if running_samples % 100:
+                logging(loss, running_corrects, running_samples, total_samples)
+            
+        total_loss = running_loss/total_samples
+        total_acc = running_corrects/total_samples
+
+    print("Test set: Loss: {:.4f}, Accuracy: {:.0f}%".format(total_loss, total_acc))
+
+    
+def validate(model, valid_loader, criterion, device):
+    '''
+    Function that validates the model
+    
+    Args:
+        - model:
+        - valid_loader: data_loader of valid dataset
+        - criterion: loss function
+        - device: CPU/ GPU
+    
+    Returns:
+        - total_loss: validation loss
+        - total_acc: validation accuracy
     '''
     
     model.eval()
     
-    running_loss = 0
+    running_loss = 0.0
     running_corrects = 0
+    running_samples = 0
+    total_samples = len(valid_loader.dataset)
     
-
-    for inputs, labels in test_loader:
-        inputs=inputs.to(device)
-        labels=labels.to(device)
-        outputs=model(inputs)
-        loss=criterion(outputs, labels)
-        _, preds = torch.max(outputs, 1)
-        running_loss += loss.item() * inputs.size(0)
-        running_corrects += torch.sum(preds == labels.data).item()
-
-    total_loss = running_loss / len(test_loader.dataset)
-    total_acc = running_corrects/ len(test_loader.dataset)
-    print(f"Testing Accuracy: {100*total_acc}, Testing Loss: {total_loss}")
-
-def train(model, train_loader, valid_loader, criterion, optimizer, device):
-
-    '''
-    Trains the pre-trained model on training data and validates on validation data over given number of epochs. 
-    
-    Args:
-        - model: Pytorch model
-        - train_loader: DataLoader object of the train data
-        - valid_loader: DataLoader object of the valid data
-        - criterion: Loss function
-        - optimizer: Optimizer of the model
-        - device: cpu/gpu
-    '''
-        
-    image_dataset = {'train':train_loader, 'valid':valid_loader}
-    loss_counter = 0
-    best_loss=1e6
-    
-    for epoch in range(1, args.epochs+1):
-        for phase in ['train', 'valid']:
-            print(f"Epoch {epoch}, Phase {phase}")
+    with torch.no_grad():
+        for inputs, labels in valid_loader:
             
-            if phase == 'train':
-                model.train()
-            else:
-                model.eval()
-                
-            running_loss = 0.0
-            running_corrects = 0
-            running_samples = 0
-
-            for batch_idx, (inputs, labels) in enumerate(image_dataset[phase]):
-                
-                inputs = inputs.to(device)
-                labels = labels.to(device)
-                outputs = model(inputs)
-                loss = criterion(outputs, labels)
-                
-                if phase == 'train':
-                    optimizer.zero_grad()
-                    loss.backward()
-                    optimizer.step()
-                
-                _, preds = torch.max(outputs, 1)
-                running_loss += loss.item()*inputs.size(0)
-                running_corrects += torch.sum(preds == labels.data).item()
-                running_samples += len(inputs)
-                
-                if batch_idx %100 == 0:
-                    accuracy = running_corrects/running_samples
-                    print("Images [{}/{} ({:.0f}%)] Loss: {:.2f} Accuracy: {}/{} ({:.2f}%)".format(
-                            running_samples,
-                            len(image_dataset[phase].dataset),
-                            100.0 * (running_samples / len(image_dataset[phase].dataset)),
-                            loss.item(),
-                            running_corrects,
-                            running_samples,
-                            100.0*accuracy,
-                        )
-                    )
-                
-                if running_samples>(0.2*len(image_dataset[phase].dataset)):
-                    break
-                
-            epoch_loss = running_loss / running_samples
-            epoch_acc = running_corrects / running_samples
-
-            if phase=='valid':
-                if epoch_loss<best_loss:
-                    best_loss=epoch_loss
-                else:
-                    loss_counter+=1
-
-        if loss_counter==1:
-            break
-    return model
-      
+            inputs = inputs.to(device)
+            labels = labels.to(device)
+            
+            output = model(inputs)
+            loss = criterion(output, labels)
+            
+            running_loss += loss.item()*inputs.size(0)  # sum up batch loss
+            pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
+            running_corrects += pred.eq(labels.view_as(pred)).sum().item()
+            running_samples += len(inputs)
+            
+            if running_samples % 100==0:
+                logging(loss, running_corrects, running_samples, total_samples)
+            
+        total_loss = running_loss/total_samples
+        total_acc = running_corrects/total_samples
     
-def net():
+    print("Valid set: Loss: {:.4f}, Accuracy: {:.0f}%".format(total_loss, total_acc))
+        
+    return total_loss, total_acc
+
+def train(model, train_loader, criterion, optimizer, device):
     '''
-    Initializes the pre-trained model
+    Function that trains the model
     
     Args:
+        - model:
+        - train_loader: data_loader of train dataset
+        - criterion: loss function
+        - optimizer: model optimizer
+        - device: CPU/ GPU
     
+    Returns:
+        - epoch_loss: training epoch loss
+        - epoch_acc: training epoch accuracy
+        
     '''
+    
+    model.train()  
+
+    running_loss = 0.0
+    running_corrects = 0
+    running_samples = 0
+    total_samples = len(train_loader.dataset)
+
+    for inputs, labels in train_loader:
+
+        inputs = inputs.to(device)
+        labels = labels.to(device)
+
+        outputs = model(inputs)
+        loss = criterion(outputs, labels)
+
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+        _, preds = torch.max(outputs, 1)
+        running_loss += loss.item()*inputs.size(0)
+        running_corrects += torch.sum(preds == labels.data).item()
+        running_samples += len(inputs)
+        
+        if running_samples % 100==0:
+            logging(loss, running_corrects, running_samples, total_samples)
+
+        if running_samples>(0.2*total_samples):
+            break
+    
+    epoch_loss = running_loss/running_samples
+    epoch_acc = running_corrects/running_samples
+            
+    return epoch_loss, epoch_acc
+
+
+def model_train_validate(model, data_loaders, epochs, criterion, optimizer, device):
+    '''
+    Train and validate the model by calling `train` and `validate` functions
+    
+    Args:
+        - model:
+        - data_loaders, dict: dictionary of data_loaders of train, test and valid
+        - epochs: number of epoch to train the model
+        - criterion: loss function
+        - optimizer: model optimizer
+        - device: CPU/ GPU
+        
+    '''
+           
+    best_loss=1e6    
+    
+    for epoch in range(1, epochs+1):
+        epoch_loss, epoch_acc = train(model, data_loaders['train'], criterion, optimizer, device)
+        valid_loss, valid_acc = validate(model, data_loaders['valid'], criterion, device)
+        
+        print("Epoch {}/{} - Train loss: {:.4f}, acc: {:.3f}%; Valid loss: {:.4f}, acc: {:.3f}%".format(
+            epoch,
+            epochs+1,
+            epoch_loss, 
+            100*epoch_acc, 
+            valid_loss, 
+            100*valid_acc)
+             )
+        
+        if epoch_loss<best_loss:
+            best_loss=epoch_loss
+        else:
+            print("Validation loss is increasing")
+            break
+
+            
+def model_fn(model_dir):
+    model = Net()
+    with open(os.path.join(model_dir, "model.pth"), "rb") as f:
+        model.load_state_dict(torch.load(f))
+    print("model loaded")
+    return model
+
+
+def save_model(model, model_dir):
+    ''' Save the model '''
+    
+    path = os.path.join(args.model_dir, 'model.pth')
+    with open(path, 'wb') as f:
+        torch.save(model.cpu().state_dict(), f)
+    print(f"Model saved to path: {path}")
+    
+
+def net():
+    '''Initializes the pre-trained model '''
+    
     model = models.resnet50(pretrained=True)
-    for param in model.parameters():
+
+    for param in model.parameters(): 
         param.requires_grad=False
     
     num_features = model.fc.in_features
     model.fc = nn.Sequential(
-        nn.Linear(num_features, 252),
-        nn.Linear(252, 133)
+        nn.Linear(num_features, 2048),
+        nn.ReLU(inplace=True),
+        nn.Linear(2048, 516),
+        nn.ReLU(inplace=True),
+        nn.Linear(516, 133)
     )
     
     print("Model loaded")
     
     return model
 
-def create_data_loaders(data, batch_size):
+
+def create_data_loaders(data, batch_size, data_type):
     '''
     Loads and transforms the data and creates `DataLoader` object
     
@@ -156,17 +257,31 @@ def create_data_loaders(data, batch_size):
         - data_loader: DataLoader object 
         
     '''
-    
-    transform = transforms.Compose([
-        transforms.Resize(size=(300,400)), 
+    transform_train = transforms.Compose([
+        transforms.Resize(300), 
+        transforms.CenterCrop(224),
+        transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
         transforms.Normalize(
-            (0.1307,), (0.3081,)
+            (0.497,0.402,0.425), (0.308, 0.325, 0.301)
         )
     ])
     
-    data_image = ImageFolder(root=data, transform=transform)
-    data_loader = torch.utils.data.DataLoader(data_image, batch_size=batch_size, shuffle=True)
+    transform_valid = transforms.Compose([
+        transforms.Resize(300), 
+        transforms.CenterCrop(224),
+        transforms.ToTensor(),
+        transforms.Normalize(
+            (0.497,0.402,0.425), (0.308, 0.325, 0.301)
+        )
+    ])
+    
+    if data_type=='train':
+        data_image = ImageFolder(root=data, transform=transform_train)
+        data_loader = torch.utils.data.DataLoader(data_image, batch_size=batch_size, shuffle=True)
+    else:
+        data_image = ImageFolder(root=data, transform=transform_valid)
+        data_loader = torch.utils.data.DataLoader(data_image, batch_size=batch_size, shuffle=True)
     
     print("Loaded", data)
     
@@ -174,7 +289,6 @@ def create_data_loaders(data, batch_size):
     
 
 def main(args):
-    
     # initialized the model
     model=net()
     
@@ -184,22 +298,23 @@ def main(args):
          
     # setup the device type
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    # get the batch_size from the args
-    batch_size=args.batch_size
     
     # load the data
-    train_loader=create_data_loaders(args.train, batch_size)
-    valid_loader=create_data_loaders(args.valid, batch_size)
-    test_loader=create_data_loaders(args.test, batch_size)  
+    batch_size=args.batch_size
+    data_loaders = {'train':create_data_loaders(args.train, batch_size, 'train'),
+                    'test':create_data_loaders(args.test, batch_size,'test'),
+                    'valid':create_data_loaders(args.valid, batch_size,'valid')  
+    }
 
     # train and test the model
-    train(model, train_loader, valid_loader, loss_criterion, optimizer, device)
-    test(model, test_loader, loss_criterion, device)
-    
-    # save the model
-    with open(os.path.join(args.model_dir, 'dog_bread_model.pth'), 'wb') as f:
-        torch.save(model.state_dict(), f)
+    model_train_validate(model, data_loaders, args.epochs, loss_criterion, optimizer, device)
+    test(model, data_loaders['test'], loss_criterion, device)
 
+    # save the model
+    save_model(model, args.model_dir)
+    
+
+    
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
 
@@ -209,14 +324,6 @@ if __name__=='__main__':
         default=64,
         metavar="N",
         help="input batch size for training (default: 64)"
-    )
-    
-    parser.add_argument(
-        "--test-batch-size",
-        type=int,
-        default=1000,
-        metavar="N",
-        help="input batch size for testing (default: 64)"
     )
     
     parser.add_argument(
