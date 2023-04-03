@@ -52,27 +52,27 @@ def test(model, test_loader, criterion, device, hook):
     running_samples = 0
     total_samples = len(test_loader.dataset)
     
-    with torch.no_grad():
-        for inputs, labels in test_loader:
-            
-            inputs = inputs.to(device)
-            labels = labels.to(device)
-            
-            output = model(inputs)
-            loss = criterion(output, labels)
-            
-            running_loss += loss.item()*inputs.size(0)  # sum up batch loss
-            pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
-            running_corrects += pred.eq(labels.view_as(pred)).sum().item()
-            running_samples += len(inputs)
 
-            if running_samples % 100:
-                logging(loss, running_corrects, running_samples, total_samples)
-            
-        total_loss = running_loss/total_samples
-        total_acc = running_corrects/total_samples
+    for inputs, labels in test_loader:
 
-    print("\nTest set: Loss: {:.4f}, Accuracy: {:.0f}%\n".format(total_loss, total_acc))
+        inputs = inputs.to(device)
+        labels = labels.to(device)
+
+        outputs = model(inputs)
+        loss = criterion(outputs, labels)
+        _, pred = torch.max(outputs, 1)
+
+        running_loss += loss.item()*inputs.size(0)  # sum up batch loss
+        running_corrects += torch.sum(pred == labels.data).item()
+        running_samples += len(inputs)
+        
+        if running_samples>(1*total_samples):
+            break
+
+    total_loss = running_loss/total_samples
+    total_acc = running_corrects/total_samples
+
+    print("\nTest set: Loss: {:.4f}, Accuracy: {:.3f}%\n".format(total_loss, 100*total_acc))
 
     
 def validate(model, valid_loader, criterion, device, hook):
@@ -101,25 +101,30 @@ def validate(model, valid_loader, criterion, device, hook):
     running_samples = 0
     total_samples = len(valid_loader.dataset)
     
-    with torch.no_grad():
-        for inputs, labels in valid_loader:
-            
-            inputs = inputs.to(device)
-            labels = labels.to(device)
-            
-            output = model(inputs)
-            loss = criterion(output, labels)
-            
-            running_loss += loss.item()*inputs.size(0)  # sum up batch loss
-            pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
-            running_corrects += pred.eq(labels.view_as(pred)).sum().item()
-            running_samples += len(inputs)
-            
-            if running_samples % 100==0:
-                logging(loss, running_corrects, running_samples, total_samples)
-            
-        total_loss = running_loss/total_samples
-        total_acc = running_corrects/total_samples
+    for inputs, labels in valid_loader:
+
+        inputs = inputs.to(device)
+        labels = labels.to(device)
+
+        outputs = model(inputs)
+        loss = criterion(outputs, labels)
+    
+        _, pred = torch.max(outputs, 1)
+        
+        running_loss += loss.item()*inputs.size(0)  # sum up batch loss
+        running_corrects += torch.sum(pred == labels.data).item()
+        running_samples += len(inputs)
+
+        # if running_samples % 10==0:
+        #     logging(loss, running_corrects, running_samples, total_samples)
+        
+        if running_samples > (1*total_samples):
+            break
+
+    total_loss = running_loss/running_samples
+    total_acc = running_corrects/running_samples
+    
+    print("\nValid set: Loss: {:.4f}, Accuracy: {:.3f}%\n".format(total_loss, 100*total_acc))    
     
     return total_loss, total_acc
 
@@ -163,20 +168,22 @@ def train(model, train_loader, criterion, optimizer, device, hook):
         loss.backward()
         optimizer.step()
 
-        _, preds = torch.max(outputs, 1)
+        _, pred = torch.max(outputs, 1)
         running_loss += loss.item()*inputs.size(0)
-        running_corrects += torch.sum(preds == labels.data).item()
+        running_corrects += torch.sum(pred == labels.data).item()
         running_samples += len(inputs)
         
-        if running_samples % 100==0:
-            logging(loss, running_corrects, running_samples, total_samples)
+        # if running_samples % 10==0:
+        #     logging(loss, running_corrects, running_samples, total_samples)
 
-        if running_samples>(0.2*total_samples):
+        if running_samples>(1*total_samples):
             break
     
     epoch_loss = running_loss/running_samples
     epoch_acc = running_corrects/running_samples
-            
+    
+    print("\nTrain set: Loss: {:.4f}, Accuracy: {:.3f}%\n".format(epoch_loss, 100*epoch_acc))              
+    
     return epoch_loss, epoch_acc
 
 
@@ -210,15 +217,15 @@ def model_train_validate(model, data_loaders, epochs, criterion, optimizer, devi
             100*valid_acc)
              )
         
-        if epoch_loss<best_loss:
-            best_loss=epoch_loss
+        if valid_loss<best_loss:
+            best_loss=valid_loss
         else:
             print("Validation loss is increasing")
             break
 
             
 def model_fn(model_dir):
-    model = Net()
+    model = net()
     with open(os.path.join(model_dir, "model.pth"), "rb") as f:
         model.load_state_dict(torch.load(f))
     print("model loaded")
@@ -229,8 +236,7 @@ def save_model(model, model_dir):
     ''' Save the model '''
     
     path = os.path.join(args.model_dir, 'model.pth')
-    with open(path, 'wb') as f:
-        torch.save(model.cpu().state_dict(), f)
+    torch.save(model.state_dict(), path)
     print(f"Model saved to path: {path}")
     
 
@@ -256,7 +262,7 @@ def net():
     return model
 
 
-def create_data_loaders(data, batch_size, data_type):
+def create_data_loaders(data_dir, batch_size, data_type):
     '''
     Loads and transforms the data and creates `DataLoader` object
     
@@ -269,7 +275,7 @@ def create_data_loaders(data, batch_size, data_type):
         
     '''
     transform_train = transforms.Compose([
-        transforms.Resize(300), 
+        transforms.Resize(256), 
         transforms.CenterCrop(224),
         transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
@@ -279,7 +285,7 @@ def create_data_loaders(data, batch_size, data_type):
     ])
     
     transform_valid = transforms.Compose([
-        transforms.Resize(300), 
+        transforms.Resize(256), 
         transforms.CenterCrop(224),
         transforms.ToTensor(),
         transforms.Normalize(
@@ -288,13 +294,13 @@ def create_data_loaders(data, batch_size, data_type):
     ])
     
     if data_type=='train':
-        data_image = ImageFolder(root=data, transform=transform_train)
-        data_loader = torch.utils.data.DataLoader(data_image, batch_size=batch_size, shuffle=True)
+        data_image = ImageFolder(root=data_dir, transform=transform_train)
+        data_loader = torch.utils.data.DataLoader(data_image, batch_size=batch_size, shuffle=True, num_workers=2)
     else:
-        data_image = ImageFolder(root=data, transform=transform_valid)
-        data_loader = torch.utils.data.DataLoader(data_image, batch_size=batch_size, shuffle=True)
+        data_image = ImageFolder(root=data_dir, transform=transform_valid)
+        data_loader = torch.utils.data.DataLoader(data_image, batch_size=batch_size, shuffle=True, num_workers=2)
     
-    print("Loaded", data)
+    print("Loaded", data_type)
     
     return data_loader
     
