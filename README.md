@@ -5,7 +5,7 @@ The nanodegree program is 3-month self-paced certification program which was tak
 
 ____
 
-## [1. Prediction of Bike demand using AutoGluon]()
+## [1. Prediction of Bike demand using AutoGluon](https://github.com/uyangas/AWS_MLE/tree/main/1_Predict_Bike_Sharing_Demand)
 
 ### Project goal:
 
@@ -17,7 +17,7 @@ To predict [bike demand](https://www.kaggle.com/c/bike-sharing-demand) using aut
 1. Code notebook's html ([`Prediction Using AutoGluon.html`](https://github.com/uyangas/AWS_MLE/blob/main/1_Predict_Bike_Sharing_Demand/Prediction%20Using%20AutoGluon.html))
 
 ____
-## [2. Building ML Workflow on Amazon Sagamaker]()
+## [2. Building ML Workflow on Amazon Sagamaker](https://github.com/uyangas/AWS_MLE/tree/main/2_ML_Workflow_on_Amazon_Sagemaker)
 
 ### Project goal:
 
@@ -35,7 +35,7 @@ To predict motorcycle and bike image from [`CIFAR-100`](https://www.cs.toronto.e
 1. Screenshots of Step function workflow
 
 ____
-## [3. Image Classification using AWS Sagemaker]()
+## [3. Image Classification using AWS Sagemaker](https://github.com/uyangas/AWS_MLE/tree/main/3_Image_Classification_Using_AWS%20Sagemaker)
 
 ### Project goal:
 
@@ -55,7 +55,7 @@ To predict dog bread from image dataset using pretrained model through Sagemaker
 1. Screenshots of successfully trained hyperparameter tuning and model training processes
 
 ____
-## [4. TBD]()
+## [4. Operationalizing an AWS ML Project](https://github.com/uyangas/AWS_MLE/tree/main/4_Operationalizing%20an%20AWS%20ML)
 
 ### Project goal: 
 
@@ -67,12 +67,12 @@ To understand the operational aspects of model deployment including cost, effici
 1. Design secure machine learning projects
 
 ### Deliverables:
-1. Model training notebook containing hyperparameter tuning, model training, distributed training and model deployment ([`train_and_deploy-solution.ipynb`]())
-1. Model train and hyperparameter tuning script ([`hpo.py`]())
-1. Model training script on EC2 instance ([`ec2train1.py`]())
-1. Lambda function script ([`lambdafunction.py`]())
-1. PDF file that explains the process ([`writeup.pdf`]())
-1. Screenshots of project steps
+1. Model training notebook containing hyperparameter tuning, model training, distributed training and model deployment ([`train_and_deploy-solution.ipynb`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing%20an%20AWS%20ML/train_and_deploy-solution.ipynb))
+1. Model train and hyperparameter tuning script ([`hpo.py`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing%20an%20AWS%20ML/hpo.py))
+1. Model training script on EC2 instance ([`ec2train1.py`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing%20an%20AWS%20ML/ec2train1.py))
+1. Lambda function script ([`lambdafunction.py`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing%20an%20AWS%20ML/lamdafunction.py))
+1. PDF file that explains the process ([`writeup.pdf`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing%20an%20AWS%20ML/writeup.pdf))
+1. [Screenshots](https://github.com/uyangas/AWS_MLE/tree/main/4_Operationalizing%20an%20AWS%20ML/Screenshots) of project steps
 
 ____
 ## [5. Capstone project]()
