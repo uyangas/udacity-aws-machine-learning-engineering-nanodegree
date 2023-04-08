@@ -55,7 +55,7 @@ To predict dog bread from image dataset using pretrained model through Sagemaker
 1. Screenshots of successfully trained hyperparameter tuning and model training processes
 
 ____
-## [4. Operationalizing an AWS ML Project](https://github.com/uyangas/AWS_MLE/tree/main/4_Operationalizing%20an%20AWS%20ML)
+## [4. Operationalizing an AWS ML Project](https://github.com/uyangas/AWS_MLE/tree/main/4_Operationalizing_an_AWS_ML_Project)
 
 ### Project goal: 
 
@@ -67,15 +67,15 @@ To understand the operational aspects of model deployment including cost, effici
 1. Design secure machine learning projects
 
 ### Deliverables:
-1. Model training notebook containing hyperparameter tuning, model training, distributed training and model deployment ([`train_and_deploy-solution.ipynb`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing%20an%20AWS%20ML/train_and_deploy-solution.ipynb))
-1. Model train and hyperparameter tuning script ([`hpo.py`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing%20an%20AWS%20ML/hpo.py))
-1. Model training script on EC2 instance ([`ec2train1.py`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing%20an%20AWS%20ML/ec2train1.py))
-1. Lambda function script ([`lambdafunction.py`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing%20an%20AWS%20ML/lamdafunction.py))
-1. PDF file that explains the process ([`writeup.pdf`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing%20an%20AWS%20ML/writeup.pdf))
-1. [Screenshots](https://github.com/uyangas/AWS_MLE/tree/main/4_Operationalizing%20an%20AWS%20ML/Screenshots) of project steps
+1. Model training notebook containing hyperparameter tuning, model training, distributed training and model deployment ([`train_and_deploy-solution.ipynb`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing_an_AWS_ML_Project/train_and_deploy-solution.ipynb))
+1. Model train and hyperparameter tuning script ([`hpo.py`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing_an_AWS_ML_Project/hpo.py))
+1. Model training script on EC2 instance ([`ec2train1.py`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing_an_AWS_ML_Project/ec2train1.py))
+1. Lambda function script ([`lambdafunction.py`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing_an_AWS_ML_Project/lamdafunction.py))
+1. PDF file that explains the process ([`writeup.pdf`](https://github.com/uyangas/AWS_MLE/blob/main/4_Operationalizing_an_AWS_ML_Project/writeup.pdf))
+1. [Screenshots](https://github.com/uyangas/AWS_MLE/tree/main/4_Operationalizing_an_AWS_ML_Project/Screenshots) of project steps
 
 ____
-## [5. Capstone project]()
+## [5. Dementia Severity Prediction from Brain X-ray Images (Capstone project)]()
 
 ### Project goal:
 
