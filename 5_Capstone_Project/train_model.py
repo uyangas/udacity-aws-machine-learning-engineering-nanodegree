@@ -218,7 +218,6 @@ def save_model(model, model_dir):
     
 
 def conv_block(input_size, kernel_size):
-    """Mendefinisikan Convolutional NN block untuk model Sequential CNN. """
     
     block = nn.Sequential(
         nn.Conv2d(input_size, input_size+96, kernel_size=kernel_size, stride=1, padding=1),
@@ -232,7 +231,6 @@ def conv_block(input_size, kernel_size):
     return block
     
 def dense_block(input_size, output_unit, dropout_rate):
-    """Mendefinisikan Dense NN block untuk model Sequential CNN. """
     
     block = nn.Sequential(
         nn.Linear(input_size, output_unit),
