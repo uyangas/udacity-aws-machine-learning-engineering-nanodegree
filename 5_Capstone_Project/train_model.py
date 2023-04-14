@@ -187,13 +187,16 @@ def model_train_validate(model, data_loaders, epochs, criterion, optimizer, devi
         train_loss, train_acc = train(model, data_loaders['train'], criterion, optimizer, device, hook)
         valid_loss, valid_acc = validate(model, data_loaders['valid'], criterion, device, hook)
         
-        print("Epoch {}/{} . . . ".format(epoch, epochs+1))        
+        if epoch%5==0:
+            print("Epoch {}/{} . . . ".format(epoch, epochs+1))
+            print("Train loss: {:.3f}, acc: {:.3f}%".format(train_loss, 100*train_acc))
+            print("Valid loss: {:.3f}, acc: {:.3f}%".format(valid_loss, 100*valid_acc))
         
-        if valid_loss<best_loss:
-            best_loss=valid_loss
-        else:
-            print("Validation loss is increasing")
-            break
+        # if valid_loss<best_loss:
+        #     best_loss=valid_loss
+        # else:
+        #     print("Validation loss is increasing")
+        #     break
 
             
 def model_fn(model_dir):
@@ -217,12 +220,12 @@ def save_model(model, model_dir):
 def conv_block(input_size, kernel_size):
     """Mendefinisikan Convolutional NN block untuk model Sequential CNN. """
     
-    block = Sequential(
+    block = nn.Sequential(
         nn.Conv2d(input_size, input_size+96, kernel_size=kernel_size, stride=1, padding=1),
         nn.ReLU(),
         nn.Conv2d(input_size+96, input_size+64, kernel_size=kernel_size, stride=1, padding=1),
         nn.ReLU(),
-        # BatchNorm2d(),
+        nn.BatchNorm2d(input_size+64),
         nn.MaxPool2d(2, 2)
     )
     
@@ -231,10 +234,10 @@ def conv_block(input_size, kernel_size):
 def dense_block(input_size, output_unit, dropout_rate):
     """Mendefinisikan Dense NN block untuk model Sequential CNN. """
     
-    block = Sequential(
+    block = nn.Sequential(
         nn.Linear(input_size, output_unit),
         nn.ReLU(),
-        # BatchNorm2d(),
+        nn.BatchNorm1d(output_unit),
         nn.Dropout(dropout_rate)
     )
     
@@ -246,9 +249,9 @@ def net(num_classes, input_size, kernel_size, dropout_rate):
     model = nn.Sequential(
         nn.Conv2d(input_size, 128 , kernel_size=kernel_size, padding='same'),
         nn.ReLU(),
-        nn.Conv2D(128, 64, kernel_size=kernel_size, padding='same'),
+        nn.Conv2d(128, 64, kernel_size=kernel_size, padding='same'),
         nn.ReLU(),
-        nn.MaxPool2d(2, 2)
+        nn.MaxPool2d(2, 2),
         conv_block(input_size=64, kernel_size=kernel_size),
         conv_block(input_size=128, kernel_size=kernel_size),
         conv_block(input_size=192, kernel_size=kernel_size),
@@ -256,9 +259,9 @@ def net(num_classes, input_size, kernel_size, dropout_rate):
         conv_block(input_size=256, kernel_size=kernel_size),
         nn.Dropout(dropout_rate),
         nn.Flatten(),
-        dense_block(input_size=256*(kernel_size+1)*(kernel_size+1), output_unit=512, 0.7),
-        dense_block(input_size=512, output_unit=128, 0.5),
-        dense_block(input_size=128, output_unit=64, 0.3),
+        dense_block(input_size=8000, output_unit=512, dropout_rate=0.7),
+        dense_block(input_size=512, output_unit=128, dropout_rate=0.5),
+        dense_block(input_size=128, output_unit=64, dropout_rate=0.3),
         nn.Linear(64, num_classes)
     )
     
@@ -278,14 +281,15 @@ def create_data_loaders(data_dir, batch_size, data_type):
         
     '''
     transform_train = transforms.Compose([
-        transforms.Resize(200),
-        transforms.RandomHorizontalFlip(),
+        transforms.Resize((176,176)),
+        transforms.ColorJitter(brightness=0.5, contrast=1, saturation=0.1, hue=0.5),
+        # transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
         transforms.Normalize((0.497,0.402,0.425), (0.308, 0.325, 0.301))
     ])
     
     transform_valid = transforms.Compose([
-        transforms.Resize(200), 
+        transforms.Resize((176,176)), 
         transforms.ToTensor(),
         transforms.Normalize((0.497,0.402,0.425), (0.308, 0.325, 0.301))
     ])
