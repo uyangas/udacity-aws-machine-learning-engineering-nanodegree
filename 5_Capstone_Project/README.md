@@ -38,10 +38,10 @@ Out of `5,121` training image, `20%` were randomly sampled to create `valid` set
 For pre-trained model, `VGG16` was chosen. Although [`VGG`](https://www.researchgate.net/figure/Comparison-of-Convolutional-Neural-Network-Architectures-in-Terms-of-Size-and-Performance_fig3_363738835) is relatively older and larger compared to the recent smaller models such as `Inception` and `ResNet`, it tends to be more [robust](https://www.eetimes.eu/ai-tradeoff-accuracy-or-robustness/).
 
 The pre-trained models' [size and accuracy comparison](https://www.researchgate.net/figure/Comparison-of-Convolutional-Neural-Network-Architectures-in-Terms-of-Size-and-Performance_fig3_363738835)
-![tuning.png](./Utils/Comparison-of-Convolutional-Neural-Network-Architectures-in-Terms-of-Size-and-Performance.png)
+![tuning.png](./utils/Comparison-of-Convolutional-Neural-Network-Architectures-in-Terms-of-Size-and-Performance.png)
 
 The pre-trained models' [robustness and accuracy comparison](https://www.eetimes.eu/ai-tradeoff-accuracy-or-robustness/) 
-![tuning.png](./Utils/robustness.png)
+![tuning.png](./utils/robustness.png)
 
 
 ### 3.1. The model structure & setup
